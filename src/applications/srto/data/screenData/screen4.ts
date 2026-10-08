@@ -1,13 +1,12 @@
 import { ScreenData } from '../../types/mapdata-types'
 
-const OLD_TRACK_COLOR = 'rgb(255, 100, 100, 0.1)'
-const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
-const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
-const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
-
 /* ================================================================================
     SCREEN 4 = ROZPRZA - PIOTRKOW TRYBUNALSKI - KOLUSZKI - SKIERNIEWICE - ZYRARDOW
    ================================================================================ */
+
+const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
+const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
+const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
     "ADDITIONAL_ELEMENTS": {
@@ -21,6 +20,16 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
         "ANNOTATIONS": [
             {
                 annotationType: 'differentScreenMarker',
+                nodePos: { x: 30, y: 495 },
+                text: 'LK17 - Łódź Fabryczna'
+            },
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 390, y: 550 },
+                text: 'LK25 - Łódź Kaliska'
+            },
+            {
+                annotationType: 'differentScreenMarker',
                 nodePos: { x: 1840, y: 792 },
                 text: 'LK25 - Dębica'
             },
@@ -28,6 +37,11 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
                 annotationType: 'differentScreenMarker',
                 nodePos: { x: 15, y: 1210 },
                 text: 'LK11 - Łowicz Główny'
+            },
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 15, y: 1565 },
+                text: 'LK4 - Zawiercie'
             },
             {
                 annotationType: 'differentScreenMarker',
@@ -48,7 +62,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
                     { first: { x: 2540, y: 540 }, second: { x: 20, y: 975 } },       // [D] Koluszki <-> Rogow
                     { first: { x: 2540, y: 980 }, second: { x: 220, y: 1285 } },       // [E] Plycwia <-> Skierniewice
                     { first: { x: 2430, y: 1260 }, second: { x: 20, y: 1425 } },       // [F] Skierniewice <-> Zyrardow
-                    { first: { x: 2150, y: 1430 }, second: { x: 20, y: 1565 } },       // [G] Zyrardow <-> Grodzisk Mazowiecki
+                    { first: { x: 2150, y: 1430 }, second: { x: 20, y: 1645 } },       // [G] Zyrardow <-> Grodzisk Mazowiecki
                 ]
             }
         ]
@@ -4148,14 +4162,14 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'L1_693N',
                 signalPos: { x: '830', y: '1310' },
                 trainPos: { x: '815', y: '1310' },
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: 'L1_692',
                 signalPos: { x: '830', y: '1340' },
                 trainPos: { x: '815', y: '1340' },
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
                 signalDirectionOnMap: 'right',
             },
             {
@@ -6089,19 +6103,20 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
     },
 
 
-    "KORYTOW_GRODZISKMAZOWIECKI": {
+    "PART_KORYTOW_GRODZISKMAZOWIECKI": {
         "TRACKS": [
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M10,1580 TSTART LR10 SPR10 ABS100-20-3',
-                    'M10,1600 TSTART LR10 SPR10 ABS100-20-3'
+                    'M10,1590 DOT5-5-3 SPR5 ABS100-20-3',
+                    'M10,1610 DOT5-5-3 SPR5 ABS100-20-3'
                 ]
             },
         ],
         "SIGNALS": [
             {
                 signalName: 'L4_73',
+                invisibleSignal: true,
                 signalPos: { x: '30', y: '1590' },
                 trainPos: { x: '45', y: '1590' },
                 signalDirectionOnMap: 'left',
@@ -6109,6 +6124,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
             },
             {
                 signalName: 'L4_74N',
+                invisibleSignal: true,
                 signalPos: { x: '30', y: '1610' },
                 trainPos: { x: '45', y: '1610' },
                 signalDirectionOnMap: 'left',

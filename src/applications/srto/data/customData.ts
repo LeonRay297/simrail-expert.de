@@ -236,7 +236,7 @@ export const screenList: Screen[] = [
   },
   {
     screenid: 'screen5',
-    screenTitle: 'S5 | Kraków Główny - Zastów - Niedźwiedź - Słomniki - Tunel - Kozłów - Sędziszów / Psary',
+    screenTitle: 'S5 | Sędziszów / Psary - Kozłów - Tunel - Słomniki - Niedźwiedź - Zastów - Kraków Główny',
   },
   {
     screenid: 'screen6',
@@ -256,8 +256,8 @@ export const serverTimeOffset = {
     "int4": +12,
     "int5": +2,
     "int9": -3,
-    "pl1": -9,
-    "pl2": +2,
+    "pl1": -6,
+    "pl2": -2,
     "pl3": +2,
-    "pl5": -4,
+    "pl5": +8,
 }

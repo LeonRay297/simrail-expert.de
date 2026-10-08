@@ -36,7 +36,7 @@ export function ServerPanel({
         togglePanel
     }
 
-    const allUsagePercent = (() => {
+    const onlinePlayers = (() => {
         let totalPlayers = 0;
         let totalSlots = 0;
 
@@ -45,7 +45,12 @@ export function ServerPanel({
             totalSlots += entry.stations.total + entry.trains.total;
         }
 
-        return totalSlots > 0 ? `${((totalPlayers / totalSlots) * 100).toFixed(2)} %` : '0 %';
+        const percent = totalSlots > 0 ? `${((totalPlayers / totalSlots) * 100).toFixed(2)} %` : '0 %';
+
+        return {
+            players: totalPlayers.toString(),
+            percent: percent
+        }
     })();
 
     return (
@@ -54,7 +59,7 @@ export function ServerPanel({
                 <div className={panels.hero}>
                     <div>
                         <h3 className={panels.title}>Select a Server</h3>
-                        <span>Overall Usage: {allUsagePercent}</span>
+                        <span className={styles.allOnline}>{`Currently playing: ${onlinePlayers.players} | ${onlinePlayers.percent}`}</span>
                     </div>
                     <button className={panels.close} onClick={() => togglePanel('server')}>
                         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -192,6 +197,15 @@ function ServerOption({
     playerCount: SimRailDataTypes.PlayerCount
     togglePanel: (panel: OpenPanel) => void
 }) {
+
+    const isServerOnline = serverData.find(server => server.ServerCode === code)?.IsActive ?? false
+
+    const count = playerCount[code]
+
+    const playerStations = isServerOnline && count ? `${count.stations.byPlayer} / ${count.stations.total}` : '0 / 0'
+    const playerTrains = isServerOnline && count ? `${count.trains.byPlayer} / ${count.trains.total}` : '0 / 0'
+    const percent = isServerOnline && count ? `${count.percentFilled.toFixed(0)} %` : '0 %'
+
     return (
         <>
             <div
@@ -202,16 +216,16 @@ function ServerOption({
                 }}
             >
                 <div className={styles.server}>
-                    <span className={`${styles.statusDot} ${serverData.find(server => server.ServerCode === code)?.IsActive ? styles.statusOnline : styles.statusOffline}`}></span>
+                    <span className={`${styles.statusDot} ${isServerOnline ? styles.statusOnline : styles.statusOffline}`}></span>
                     <span className={styles.code}>{code.toLocaleUpperCase()}</span>
                     {extra &&
                         <span className={styles.extra}>{extra.toLocaleUpperCase()}</span>
                     }
                 </div>
                 <div className={styles.playerCounterGrid}>
-                    <span>{playerCount[code] ? `${playerCount[code].stations.byPlayer} / ${playerCount[code].stations.total}` : '0 / 0'}</span>
-                    <span>{playerCount[code] ? `${playerCount[code].trains.byPlayer} / ${playerCount[code].trains.total}` : '0 / 0'}</span>
-                    <span>{playerCount[code] ? `${playerCount[code].percentFilled.toFixed(0)} %` : '0 %'}</span>
+                    <span>{playerStations}</span>
+                    <span>{playerTrains}</span>
+                    <span>{percent}</span>
                 </div>
             </div>
         </>

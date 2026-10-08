@@ -1,12 +1,12 @@
 import { ScreenData } from '../../types/mapdata-types'
 
+/* ===============================================================================================
+SCREEN 3 = SEDZICE - RETKINIA - LODZ KALISKA - ZGIERZ - LODZ WIDZEW - LODZ OLECHOW - GALKOWEK
+=============================================================================================== */
+
 const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
 const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
-
-/* ===============================================================================================
-    SCREEN 3 = SEDZICE - RETKINIA - LODZ KALISKA - ZGIERZ - LODZ WIDZEW - LODZ OLECHOW - GALKOWEK
-   =============================================================================================== */
 
 export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
     "ADDITIONAL_ELEMENTS": {
@@ -6584,7 +6584,7 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
         ],
         "SIGNALS": [
             {
-                signalName: '108_Bd_A',
+                signalName: '108_Bd_AA',
                 signalPos: { x: '340', y: '2360' },
                 trainPos: { x: '325', y: '2360' },
                 signalType: 'station_standard',
@@ -6657,7 +6657,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             },
 
             {
-                signalName: '108_Bd_P',
+                //& WRONG SIGNAL
+                signalName: '108_Bd_A',
                 signalPos: { x: '640', y: '2340' },
                 trainPos: { x: '655', y: '2340' },
                 // trainPosDistance: [

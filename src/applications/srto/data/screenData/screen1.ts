@@ -1,10 +1,12 @@
 import { ScreenData } from '../../types/mapdata-types'
 
-const OLD_TRACK_COLOR = 'rgb(255, 100, 100, 0.1)'
+/* ======================================================================================
+    SCREEN 1 = KATOWICE - SOSNOWIEC GLOWNY - DABROWA GORNICZA - LAZY - ZAWIERCIE - PSARY
+   ====================================================================================== */
+
 const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
 const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
-
 
 export const SCREEN1_DATA: ScreenData.ScreenDataProps = {
     "ADDITIONAL_ELEMENTS": {

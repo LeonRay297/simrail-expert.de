@@ -1,13 +1,12 @@
 import { ScreenData } from "../../types/mapdata-types";
 
-const OLD_TRACK_COLOR = 'rgb(255, 100, 100, 0.1)'
+/* ==============================================================================================
+    SCREEN 2 = WLOSZCZOWA POLNOC - OPOCZNO POLUDNIE - IDZIKOWICE - GROZISK MAZOWIECKI - WARSZAWA
+   ============================================================================================== */
+
 const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
 const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
-
-/* ===============================================================
-    SCREEN 2 = PSARY - IDZIKOWICE - GROZISK MAZOWIECKI - WARSZAWA
-   =============================================================== */
 
 export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
     "ADDITIONAL_ELEMENTS": {
@@ -1361,14 +1360,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1510', y: '280' },
                 trainPos: { x: '1495', y: '280' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_1088',
                 signalPos: { x: '1510', y: '300' },
                 trainPos: { x: '1495', y: '300' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_1087',
@@ -1495,14 +1494,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1820', y: '280' },
                 trainPos: { x: '1835', y: '280' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_1040N',
                 signalPos: { x: '1820', y: '300' },
                 trainPos: { x: '1835', y: '300' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
 
             {
@@ -2355,14 +2354,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1760', y: '500' },
                 trainPos: { x: '1745', y: '500' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_last',
+                signalType: 'abs_standard',
             },
             {
                 signalName: 'L573_21N',
                 signalPos: { x: '1760', y: '500' },
                 trainPos: { x: '1775', y: '500' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
 
 
@@ -2371,14 +2370,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1880', y: '420' },
                 trainPos: { x: '1865', y: '420' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L574_15',
                 signalPos: { x: '1880', y: '420' },
                 trainPos: { x: '1895', y: '420' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_last',
+                signalType: 'abs_standard',
             },
             {
                 signalName: 'L573_33',
@@ -3203,14 +3202,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '630', y: '700' },
                 trainPos: { x: '615', y: '700' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_422',
                 signalPos: { x: '630', y: '720' },
                 trainPos: { x: '615', y: '720' },
                 signalDirectionOnMap: 'right',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_421',
@@ -3331,14 +3330,14 @@ export const SCREEN2_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '940', y: '700' },
                 trainPos: { x: '955', y: '700' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
             {
                 signalName: 'L4_384N',
                 signalPos: { x: '940', y: '720' },
                 trainPos: { x: '955', y: '720' },
                 signalDirectionOnMap: 'left',
-                signalType: 'abs_standard',
+                signalType: 'abs_last',
             },
 
             {

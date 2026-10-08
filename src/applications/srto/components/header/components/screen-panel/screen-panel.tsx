@@ -100,8 +100,8 @@ export function ScreenPanel({
                     >
                         <div className={styles.screenBadge}>{`S5`}</div>
                         <div className={styles.screenTitle}>
-                            <strong>{`Kraków Główny - Sędziszów`} <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Soon</span></strong>
-                            <span>{`Kraków Główny - Zastów - Niedźwiedź - Słomniki - Tunel - Kozłów - Sędziszów / Psary`}</span>
+                            <strong>{`Sędziszów - Kraków Główny`} <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>Soon</span></strong>
+                            <span>{`Sędziszów / Psary - Kozłów - Tunel - Słomniki - Niedźwiedź - Zastów - Kraków Główny`}</span>
                             </div>
                     </div>
                     <div
