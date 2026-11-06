@@ -5515,8 +5515,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M1550,1690 LR130 SPR20 LR90 SWUP140 LR105',
-                    'M1550,1710 LR130 SPR20 LR110 SWUP140 LR85',
+                    'M1560,1690 LR120 SPR20 LR90 SWUP140 LR105',
+                    'M1560,1710 LR120 SPR20 LR110 SWUP140 LR85',
                 ]
             },
         ],
@@ -5574,115 +5574,115 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             }
         ]
     },
-    "4046_SW_STARAWIES": {
+"4046_SW_STARAWIES": {
         "TRACKS": [
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M1190,1690 LR130 SPR10 LR100 SPR10 LR100',
-                    'M1190,1710 LR130 SPR10 LR100 SPR10 LR100',
-                    'M1210,1710 SWUP20 LR15 SWUP20 LR85 SPR10 LR100 SPR10 LR55 SWDN20 LR15 SWDN20',
-                    'M1250,1670 SWUP20 LR65 SPR10 LR100 SPR10 LR35 SWDN20',
-                    'M1300,1650 SWUP20 LR15 SPR10 LR100 SPR10 LR15 SWDN20'
+                    'M1200,1690 LR130 SPR10 LR100 SPR10 LR100',
+                    'M1200,1710 LR130 SPR10 LR100 SPR10 LR100',
+                    'M1220,1710 SWUP20 LR15 SWUP20 LR85 SPR10 LR100 SPR10 LR55 SWDN20 LR15 SWDN20',
+                    'M1260,1670 SWUP20 LR65 SPR10 LR100 SPR10 LR35 SWDN20',
+                    'M1310,1650 SWUP20 LR15 SPR10 LR100 SPR10 LR15 SWDN20'
                 ]
             },
         ],
         "SIGNALS": [
             {
                 signalName: '4046_SW_B',
-                signalPos: { x: '1190', y: '1690' },
-                trainPos: { x: '1175', y: '1690' },
+                signalPos: { x: '1200', y: '1690' },
+                trainPos: { x: '1185', y: '1690' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_A',
-                signalPos: { x: '1190', y: '1710' },
-                trainPos: { x: '1175', y: '1710' },
+                signalPos: { x: '1200', y: '1710' },
+                trainPos: { x: '1185', y: '1710' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_F10',
-                signalPos: { x: '1320', y: '1630' },
-                trainPos: { x: '1335', y: '1630' },
+                signalPos: { x: '1330', y: '1630' },
+                trainPos: { x: '1345', y: '1630' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_F8',
-                signalPos: { x: '1320', y: '1650' },
-                trainPos: { x: '1335', y: '1650' },
+                signalPos: { x: '1330', y: '1650' },
+                trainPos: { x: '1345', y: '1650' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_F6',
-                signalPos: { x: '1320', y: '1670' },
-                trainPos: { x: '1335', y: '1670' },
+                signalPos: { x: '1330', y: '1670' },
+                trainPos: { x: '1345', y: '1670' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_D',
-                signalPos: { x: '1320', y: '1690' },
-                trainPos: { x: '1335', y: '1690' },
+                signalPos: { x: '1330', y: '1690' },
+                trainPos: { x: '1345', y: '1690' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_C',
-                signalPos: { x: '1320', y: '1710' },
-                trainPos: { x: '1335', y: '1710' },
+                signalPos: { x: '1330', y: '1710' },
+                trainPos: { x: '1345', y: '1710' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_G10',
-                signalPos: { x: '1440', y: '1630' },
-                trainPos: { x: '1425', y: '1630' },
+                signalPos: { x: '1450', y: '1630' },
+                trainPos: { x: '1435', y: '1630' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_G8',
-                signalPos: { x: '1440', y: '1650' },
-                trainPos: { x: '1425', y: '1650' },
+                signalPos: { x: '1450', y: '1650' },
+                trainPos: { x: '1435', y: '1650' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_G6',
-                signalPos: { x: '1440', y: '1670' },
-                trainPos: { x: '1425', y: '1670' },
+                signalPos: { x: '1450', y: '1670' },
+                trainPos: { x: '1435', y: '1670' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_H',
-                signalPos: { x: '1440', y: '1690' },
-                trainPos: { x: '1425', y: '1690' },
+                signalPos: { x: '1450', y: '1690' },
+                trainPos: { x: '1435', y: '1690' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_J',
-                signalPos: { x: '1440', y: '1710' },
-                trainPos: { x: '1425', y: '1710' },
+                signalPos: { x: '1450', y: '1710' },
+                trainPos: { x: '1435', y: '1710' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
             {
                 signalName: '4046_SW_M',
-                signalPos: { x: '1540', y: '1690' },
-                trainPos: { x: '1555', y: '1690' },
+                signalPos: { x: '1550', y: '1690' },
+                trainPos: { x: '1565', y: '1690' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
             {
                 signalName: '4046_SW_O',
-                signalPos: { x: '1540', y: '1710' },
-                trainPos: { x: '1555', y: '1710' },
+                signalPos: { x: '1550', y: '1710' },
+                trainPos: { x: '1565', y: '1710' },
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'left',
             },
@@ -5693,15 +5693,15 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Stara Wieś',
                     prefix: 'SW',
-                    pos: { x: 1380, y: 1600 },
-                    posFlipped: { x: 1380, y: 1740 }
+                    pos: { x: 1390, y: 1600 },
+                    posFlipped: { x: 1390, y: 1740 }
                 },
                 trackLabels: [
-                    { text: '10', pos: { x: 1380, y: 1630 } },
-                    { text: '8', pos: { x: 1380, y: 1650 } },
-                    { text: '6', pos: { x: 1380, y: 1670 } },
-                    { text: '2', pos: { x: 1380, y: 1690 } },
-                    { text: '1', pos: { x: 1380, y: 1710 } },
+                    { text: '10', pos: { x: 1390, y: 1630 } },
+                    { text: '8', pos: { x: 1390, y: 1650 } },
+                    { text: '6', pos: { x: 1390, y: 1670 } },
+                    { text: '2', pos: { x: 1390, y: 1690 } },
+                    { text: '1', pos: { x: 1390, y: 1710 } },
                 ]
             },
         ]
@@ -5711,8 +5711,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M460,1700 LINE470,1690 M470,1690 LR10 SPR10 ABS100-20-6',
-                    'M460,1720 LINE470,1710 M470,1710 LR10 SPR10 ABS100-20-6',
+                    'M460,1700 LINE470,1690 LR10 SPR10 ABS100-20-6',
+                    'M460,1720 LINE470,1710 LR10 SPR10 ABS100-20-6',
                 ]
             },
         ],
@@ -5909,8 +5909,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M1960,1810 ABS100-20-2 SPR10 LR10 M2200,1810 LINE2210,1800',
-                    'M1960,1830 ABS100-20-2 SPR10 LR10 M2200,1830 LINE2210,1820',
+                    'M1960,1810 ABS100-20-2 SPR10 LR10 LINE2210,1800',
+                    'M1960,1830 ABS100-20-2 SPR10 LR10 LINE2210,1820',
                 ]
             },
         ],
@@ -5976,8 +5976,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M10,1820 LINE20,1810 M20,1810 LR10 SPR10 ABS100-20-4',
-                    'M10,1840 LINE20,1830 M20,1830 LR10 SPR10 ABS100-20-4',
+                    'M10,1820 LINE20,1810 LR10 SPR10 ABS100-20-4',
+                    'M10,1840 LINE20,1830 LR10 SPR10 ABS100-20-4',
                 ]
             },
         ],
@@ -8312,8 +8312,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M2280,2500 ABS100-20-2 SPR10 LR30 M2540,2500 LINE2550,2490',
-                    'M2280,2520 ABS100-20-2 SPR10 LR30 M2540,2520 LINE2550,2510',
+                    'M2280,2500 ABS100-20-2 SPR10 LR30 LINE2550,2490',
+                    'M2280,2520 ABS100-20-2 SPR10 LR30 LINE2550,2510',
                 ]
             },
         ],
