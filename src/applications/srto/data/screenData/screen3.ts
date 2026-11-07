@@ -5165,6 +5165,10 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                 signalName: '2133_Ku_C',
                 signalPos: { x: '1910', y: '1570' },
                 trainPos: { x: '1895', y: '1570' },
+                trainPosDistance: [
+                    { distanceToSignal: 1000, x: 1795, y: 1710 },
+                    { distanceToSignal: 500, x: 1895, y: 1570 },
+                ],
                 signalType: 'station_standard',
                 signalDirectionOnMap: 'right',
             },
@@ -5539,6 +5543,10 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'L3_1228',
                 signalPos: { x: '1690', y: '1690' },
                 trainPos: { x: '1705', y: '1690' },
+                trainPosDistance: [
+                    { distanceToSignal: 1000, x: 1805, y: 1550 },
+                    { distanceToSignal: 500, x: 1705, y: 1690 },
+                ],
                 signalType: 'abs_last',
                 signalDirectionOnMap: 'left',
             },
@@ -5567,8 +5575,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                     pos: { x: 1600, y: 1660 },
                     posFlipped: { x: 1600, y: 1740 },
                     platforms: [
-                        { pos: { x: 1555, y: 1677.5 }, width: 40, height: 7.5 },
-                        { pos: { x: 1595, y: 1715 }, width: 40, height: 7.5 },
+                        { pos: { x: 1560, y: 1677.5 }, width: 40, height: 7.5 },
+                        { pos: { x: 1600, y: 1715 }, width: 40, height: 7.5 },
                     ]
                 }
             }
@@ -6672,8 +6680,8 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                 trainPos: { x: '325', y: '2020' },
                 trainPosDistance: [
                     // distance to signal from Zgierz: ~ 6509m
-                    { distanceToSignal: 5070, x: 2490, y: 830 }, // at po Zgierz Rudunki
-                    { distanceToSignal: 4000, x: 2535, y: 830 }, // after po Zgierz Rudunki
+                    { distanceToSignal: 5070, x: 2490, y: 630 }, // at po Zgierz Rudunki
+                    { distanceToSignal: 4000, x: 2535, y: 630 }, // after po Zgierz Rudunki
                     { distanceToSignal: 2650, x: 100, y: 2020 }, // before po Smardzew
                     { distanceToSignal: 2490, x: 150, y: 2020 }, // at po Smardzew
                     { distanceToSignal: 790, x: 200, y: 2020 }, // after po Smardzew / before po Glinnik Wies
