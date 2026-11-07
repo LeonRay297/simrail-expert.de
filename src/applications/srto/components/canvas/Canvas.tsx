@@ -49,7 +49,7 @@ const SCREEN_DIMENSIONS: Record<ScreenId, { width: number, height: number }> = {
     'screen3': { width: 2560, height: 2500 },
     'screen4': { width: 2560, height: 1800 },
     'screen5': { width: 0, height: 0 },
-    'screen6': { width: 0, height: 0 },
+    'screen6': { width: 2560, height: 1800 },
 }
 
 export default function Canvas({
