@@ -2,11 +2,11 @@ import styles from './header-new.module.css'
 import { SetStateAction, useEffect, useState } from 'react'
 import { SimRailDataTypes } from '../../types/simrail-api'
 import { DebugRenderOptions, UserOptions } from '../../types/types'
-import { serverTimeOffset } from '../../data/customData'
 import { ScreenPanel } from './components/screen-panel/screen-panel'
 import { ServerPanel } from './components/server-panel/server-panel'
 import { SettingsPanel } from './components/settings-panel/settings-panel'
-// import { ChangelogPanel } from './components/changelog-panel/changelog-panel'
+import { getAPIEndpoint } from '../../utilities/getAPIEndpoints'
+import { serverTimeOffsetFallback } from '../../data/customData'
 
 interface ISelfProps {
     userOptions: UserOptions
@@ -21,6 +21,9 @@ interface ISelfProps {
 }
 
 export type OpenPanel = 'screen' | 'server' | 'settings' | 'changelog'
+export interface ServerTimeOffset {
+    [k: string]: number
+}
 
 export default function Header({
     userOptions,
@@ -35,13 +38,59 @@ export default function Header({
 }: ISelfProps) {
 
     const [openPanel, setOpenPanel] = useState<OpenPanel | null>(null);
-
     const [timeString, setTimeString] = useState<string[]>([]);
+    const [timezoneOffset, setTimezoneOffset] = useState<ServerTimeOffset>();
+
+    useEffect(() => {
+        let isFetching = false
+        let cancelled = false;
+        let activeController: AbortController | null = null;
+
+        async function getServerTimeOffset() {
+            if (isFetching) return;
+            isFetching = true;
+
+            const controller = new AbortController();
+            activeController = controller;
+            const FETCH_TIMEOUTID = window.setTimeout(() => controller.abort(), 4000)
+
+            try {
+                const DATA = await getAPIEndpoint('serverTimeOffset', controller.signal) as ServerTimeOffset;
+
+                if (cancelled || controller.signal.aborted) return;
+
+                setTimezoneOffset(DATA ?? serverTimeOffsetFallback);
+            } catch (e) {
+                if (cancelled) return;
+
+                // Optional: ignore expected abort logs
+                if (e instanceof DOMException && e.name === "AbortError") {
+                    setTimezoneOffset(serverTimeOffsetFallback);
+                    return;
+                }
+
+                console.error(e);
+                setTimezoneOffset(serverTimeOffsetFallback);
+            } finally {
+                window.clearTimeout(FETCH_TIMEOUTID);
+                if (activeController === controller) activeController = null;
+                isFetching = false;
+            }
+        }
+
+        getServerTimeOffset();
+
+        return () => {
+            cancelled = true;
+            activeController?.abort();
+        }
+    }, []);
 
     useEffect(() => {
         const intervalID = setInterval(getCurrentTime, 5000);
-
+        
         function getCurrentTime() {
+            if(!timezoneOffset) return;
             const formatHHMM = (hours: number, minutes: number): string => {
                 const paddedHours = String(hours).padStart(2, '0');
                 const paddedMinutes = String(minutes).padStart(2, '0');
@@ -52,7 +101,7 @@ export default function Header({
             const localHHMM = formatHHMM(localTime.getHours(), localTime.getMinutes());
 
             const utcMs = localTime.getTime() + localTime.getTimezoneOffset() * 60 * 1000;
-            const offsetHours = serverTimeOffset[userOptions.selectedServer as keyof typeof serverTimeOffset] ?? 0;
+            const offsetHours = timezoneOffset[userOptions.selectedServer as keyof typeof timezoneOffset] ?? 0;
             const serverTime = new Date(utcMs + (offsetHours * 60 * 60 * 1000));
             const serverHHMM = formatHHMM(serverTime.getHours(), serverTime.getMinutes());
 
@@ -61,7 +110,7 @@ export default function Header({
         getCurrentTime();
 
         return () => clearInterval(intervalID)
-    }, [userOptions.selectedServer])
+    }, [userOptions.selectedServer, timezoneOffset])
 
     function togglePanel(panel: OpenPanel) {
         setOpenPanel(prev => (prev === panel ? null : panel));
@@ -152,28 +201,9 @@ export default function Header({
                         </svg>
                     </button>
                 </section>
-                {/* <section className={styles.changelogButton}>
-                    <button
-                        className={`${styles.actionButton} ${openPanel === 'changelog' && styles.active}`}
-                        id='actionButton-changelog'
-                        onClick={() => { togglePanel('changelog') }}
-                    >
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <line x1="8" y1="6" x2="20" y2="6" />
-                            <line x1="8" y1="12" x2="20" y2="12" />
-                            <line x1="8" y1="18" x2="20" y2="18" />
-                            <circle cx="4" cy="6" r="1" fill="currentColor" stroke="none" />
-                            <circle cx="4" cy="12" r="1" fill="currentColor" stroke="none" />
-                            <circle cx="4" cy="18" r="1" fill="currentColor" stroke="none" />
-                        </svg>
-                    </button>
-                </section> */}
-
                 <ScreenPanel {...PanelObj} />
                 <ServerPanel {...PanelObj} />
                 <SettingsPanel {...SettingsObj} />
-                {/* <ChangelogPanel openPanel={openPanel} togglePanel={togglePanel} /> */}
-
             </header>
             <main
                 className={`${styles.backdrop} ${(openPanel === 'screen' || openPanel === 'server') && styles.dimDown} ${openPanel != null && styles.enable}`}
@@ -182,7 +212,6 @@ export default function Header({
                     e.stopPropagation();
                     setOpenPanel(null);
                 }}
-
             ></main>
         </>
     )

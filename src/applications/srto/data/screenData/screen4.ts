@@ -12,12 +12,21 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
     "ADDITIONAL_ELEMENTS": {
         "TRACKS": [
             {
-                color: '',
-                commands: []
+                color: 'orange',
+                commands: [
+                    // Skierniewice Bridge
+                    'M2086,1265 DRD5-5 LD50 DLD5-5',
+                    'M2114,1265 DLD5-5 LD50 DRD5-5',
+                ]
             },
         ],
         "SIGNALS": [],
         "ANNOTATIONS": [
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 10, y: 190 },
+                text: 'LK1 - Katowice'
+            },
             {
                 annotationType: 'differentScreenMarker',
                 nodePos: { x: 30, y: 495 },
@@ -37,6 +46,11 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
                 annotationType: 'differentScreenMarker',
                 nodePos: { x: 15, y: 1210 },
                 text: 'LK11 - Łowicz Główny'
+            },
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 2400, y: 1457 },
+                text: 'LK12 - Łuków'
             },
             {
                 annotationType: 'differentScreenMarker',
@@ -1643,17 +1657,18 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M40,440 ABS100-20-5',
-                    'M40,460 ABS100-20-5',
+                    'M10,440 DOT5-5-3 SPR5 LR100 SPR20 ABS100-20-4',
+                    'M10,460 DOT5-5-3 SPR5 LR100 SPR20 ABS100-20-4',
 
-                    'M400,500 LR220',
-                    'M400,520 LR220',
+                    'M400,500 DOT5-5-3 SPR5 LR190',
+                    'M400,520 DOT5-5-3 SPR5 LR190',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: '2422_LA_H',
+                invisibleSignal: true,
                 signalPos: { x: '30', y: '440' },
                 trainPos: { x: '45', y: '440' },
                 signalDirectionOnMap: 'left',
@@ -1661,6 +1676,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
             },
             {
                 signalName: '2422_LA_G',
+                invisibleSignal: true,
                 signalPos: { x: '30', y: '460' },
                 trainPos: { x: '45', y: '460' },
                 signalDirectionOnMap: 'left',
@@ -1669,6 +1685,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
             {
                 //~ DISTANCE POSITIONING
                 signalName: '2439_LOC_Z2',
+                invisibleSignal: true,
                 signalPos: { x: '390', y: '500' },
                 trainPos: { x: '405', y: '500' },
                 signalDirectionOnMap: 'left',
@@ -1677,6 +1694,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
             {
                 //~ DISTANCE POSITIONING
                 signalName: '2439_LOC_Z1',
+                invisibleSignal: true,
                 signalPos: { x: '390', y: '520' },
                 trainPos: { x: '405', y: '520' },
                 signalDirectionOnMap: 'left',
@@ -5168,7 +5186,7 @@ export const SCREEN4_DATA: ScreenData.ScreenDataProps = {
                     name: 'Skierniewice',
                     prefix: 'Sk',
                     pos: { x: 1465, y: 1100 },
-                    posFlipped: { x: 1465, y: 1380 }
+                    posFlipped: { x: 1510, y: 1380 }
                 },
                 dispatchingPost: {
                     type: 'computer',

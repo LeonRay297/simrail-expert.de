@@ -6,6 +6,9 @@
 # testing
 srto_testing_webserver
 src/applications/test
+public/ebula-streckenmapper.html
+public/static/json
+public/stationIndex.json
 
 # production
 /build
@@ -18,6 +21,7 @@ public/static/.htaccess
 # misc
 .env.local
 .env.production
+setupProxy.js
 
 notizen.md
 CHANGELOG.md
@@ -26,5 +30,7 @@ old_folder
 
 # future projects
 src/applications/ebula
+ssd-data
+src/applications/ft95
 src/landingpage
-public/assets/images/project-images
+# public/assets/images/project-images

@@ -1,6 +1,6 @@
 {
   "name": "simrail-expert.de",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "author": "TrueVirus",
   "license": "UNLICENSED",
   "private": true,
@@ -13,6 +13,7 @@
     "@types/jest": "^27.5.2",
     "@types/react": "^19.2.14",
     "@types/react-dom": "^19.2.3",
+    "express": "^4.22.1",
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-router": "^7.13.2",
@@ -23,9 +24,11 @@
   },
   "scripts": {
     "start": "set REACT_APP_VERSION=%npm_package_version% && set HOST=0.0.0.0&& react-scripts start",
+    "publish:ssd": "node scripts/publish-ssd-json.js",
     "build": "react-scripts build",
     "build:versioned:public": "node scripts/deploy_react_app/build-versioned.js public",
     "build:versioned:beta": "node scripts/deploy_react_app/build-versioned.js beta",
+    "build:versioned:electron": "node scripts/deploy_react_app/build-versioned.js electron",
     "serve:local": "node srto_testing_webserver/server.js",
     "start:local": "npm run build:versioned && npm run serve:local",
     "shift:coords": "tsx scripts/coordinate-shifter/shift-coordinates.ts",
@@ -56,6 +59,7 @@
   "devDependencies": {
     "@types/node": "^26.1.2",
     "prettier": "^3.9.6",
+    "serve": "^14.2.6",
     "ts-node": "^10.9.2",
     "tsx": "^4.23.9"
   }

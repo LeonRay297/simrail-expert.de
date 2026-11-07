@@ -93,6 +93,13 @@ export const NextSignalGroups: NextSignalGroup[] = [
 	{ lastSignals: ['2439_LOC_W31', '2439_LOC_W32'], nextSignal: '924_G_D' },
 	{ lastSignals: ['924_G_J', '924_G_H', '924_G_G', '924_G_F', '924_G_E'], nextSignal: '2439_LOC_Z2' },
 
+	//
+	// Lodz Widzew <-> Lodz Marysin <-> Zgierz
+	{ lastSignals: ['2457_LW_N104', '2457_LW_N102', '2457_LW_M8', '2457_LW_M6', '2457_LW_M4', '2457_LW_M2'], nextSignal: '2437_LM_A' },
+	{ lastSignals: ['2437_LM_D', '2437_LM_C'], nextSignal: '2457_LW_A' },
+	{ lastSignals: ['2437_LM_E', '2437_LM_F'], nextSignal: '5311_Zg_R' },
+	{ lastSignals: ['5311_Zg_K', '5311_Zg_L', '5311_Zg_M', '5311_Zg_N', '5311_Zg_O', '5311_Zg_P'], nextSignal: '2437_LM_H' },
+
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
 	//~ LK 15 - Zgierz - Lowicz Glowny ~\\
 	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
@@ -163,17 +170,17 @@ export const NextSignalGroups: NextSignalGroup[] = [
 	{ lastSignals: ['5377_ZP_A', '5377_ZP_B'], nextSignal: '2628_Mi_D' },
 
 	//
-	// Lodz Widzew <-> Lodz Marysin <-> Zgierz
-	{ lastSignals: ['2457_LW_N104', '2457_LW_N102', '2457_LW_M8', '2457_LW_M6', '2457_LW_M4', '2457_LW_M2'], nextSignal: '2437_LM_A' },
-	{ lastSignals: ['2437_LM_D', '2437_LM_C'], nextSignal: '2457_LW_A' },
-	{ lastSignals: ['2437_LM_E', '2437_LM_F'], nextSignal: '5311_Zg_R' },
-	{ lastSignals: ['5311_Zg_K', '5311_Zg_L', '5311_Zg_M', '5311_Zg_N', '5311_Zg_O', '5311_Zg_P'], nextSignal: '2437_LM_H' },
-	
-	//
 	// Skierniewice <-> Puszcza Marianska
 	{ lastSignals: ['3877_Sk_E4', '3877_Sk_E301'], nextSignal: '3459_PM_B' },
 	{ lastSignals: ['3459_PM_F', '3459_PM_E', '3459_PM_D', '3459_PM_C'], nextSignal: '3877_Sk_D' },
 
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+	//~ S5 | Sędziszów - Kraków Główny ~\\
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+	{ lastSignals: ['SDT_C', 'SDT_D'], nextSignal: 'SDT_Z' },
+
+	{ lastSignals: ['Tl_G', 'Tl_H', 'Tl_J'], nextSignal: 'Ch_A' },
+	{ lastSignals: ['Ch_B', 'Ch_K', 'Ch_C', 'Ch_D'], nextSignal: 'Tl_N' },
 ]
 
 export const NextPredictiveSignal: Record<string, string> = Object.fromEntries(
