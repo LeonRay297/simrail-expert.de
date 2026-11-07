@@ -27,9 +27,11 @@
     "src"
   ],
   "exclude": [
-    "src/applications/srto/data/screenData/data-templates.ts",
     "src/applications/test",
     "src/applications/ebula",
+    "src/applications/ft95",
     "src/landingpage",
+    "public/ebula-streckenmapper.html",
+    "public/stationIndex.json",
   ]
 }

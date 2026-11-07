@@ -18,9 +18,26 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                     'M12.5,1720 DOT10-5-169',
                 ]
             },
+            {
+                color: 'orange',
+                commands: [
+                    // Lodz Olechow Bridge
+                    'M1613.5,1115 DRD5-5 LD40 DLD5-5',
+                    'M1646.5,1115 DLD5-5 LD40 DRD5-5',
+                    
+                    // Lowicz Glowny LK15 Bednary - Lowicz Przedmiescie
+                    'M1193.5,2185 DRD5-5 LD40 DLD5-5',
+                    'M1216.5,2185 DLD5-5 LD40 DRD5-5',
+                ]
+            },
         ],
         "SIGNALS": [],
         "ANNOTATIONS": [
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 10, y: 218 },
+                text: 'LK14 - Tuplice'
+            },
             {
                 annotationType: 'differentScreenMarker',
                 nodePos: { x: 1910, y: 65 },
@@ -30,6 +47,11 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                 annotationType: 'differentScreenMarker',
                 nodePos: { x: 2120, y: 270 },
                 text: 'LK131 - [Zduńska Wola Karsznice]'
+            },
+            {
+                annotationType: 'differentScreenMarker',
+                nodePos: { x: 510, y: 925 },
+                text: 'Łódź Fabryczna'
             },
             {
                 annotationType: 'differentScreenMarker',
@@ -3477,11 +3499,11 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M1265,1050 DOT5-5-19 LR10 SPR10 LR10 UTLU20',
-                    'M1265,1070 DOT5-5-21 LR10 SPR10 LR10 UTLU60',
+                    'M1420,1050 DOT5-5-3 SPR5 LR10 SPR10 LR10 UTLU20',
+                    'M1420,1070 DOT5-5-5 SPR5 LR10 SPR10 LR10 UTLU60',
 
-                    'M1265,1090 DOT5-5-36 SPR5 LR2.5 SPR25 LR2.5 SPR5 DOT5-5-10 LR15 SPR10 LR20 SWDN40',
-                    'M1265,1110 DOT5-5-36 SPR5 LR2.5 SPR25 LR2.5 SPR5 DOT5-5-9 LR15 SPR10 LR15 SWDN40',
+                    'M1715,1090 DOT5-5-4 SPR5 LR15 SPR10 LR20 SWDN40',
+                    'M1715,1110 DOT5-5-3 SPR5 LR15 SPR10 LR15 SWDN40',
                 ]
             },
             {
@@ -4309,17 +4331,18 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             {
                 color: 'gray',
                 commands: [
-                    'M2440,940 LR100 SPR10',
-                    'M2440,960 LR100 SPR10',
+                    'M2440,940 LR85 SPR5 DOT5-5-3',
+                    'M2440,960 LR85 SPR5 DOT5-5-3',
 
-                    'M2440,1000 LR100 SPR10',
-                    'M2440,1020 LR100 SPR10',
+                    'M2440,1000 LR85 SPR5 DOT5-5-3',
+                    'M2440,1020 LR85 SPR5 DOT5-5-3',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: 'L17_222N',
+                invisibleSignal: true,
                 signalPos: { x: '2550', y: '940' },
                 trainPos: { x: '2535', y: '940' },
                 signalDirectionOnMap: 'right',
@@ -4327,6 +4350,7 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             },
             {
                 signalName: 'L17_219',
+                invisibleSignal: true,
                 signalPos: { x: '2550', y: '960' },
                 trainPos: { x: '2535', y: '960' },
                 signalDirectionOnMap: 'right',
@@ -4335,6 +4359,7 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             //~ ENTRY SIGNALS ZAKOWICE POLUDNIOWE
             {
                 signalName: '5377_ZP_A',
+                invisibleSignal: true,
                 signalPos: { x: '2550', y: '1000' },
                 trainPos: { x: '2535', y: '1000' },
                 signalDirectionOnMap: 'right',
@@ -4342,6 +4367,7 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
             },
             {
                 signalName: '5377_ZP_B',
+                invisibleSignal: true,
                 signalPos: { x: '2550', y: '1020' },
                 trainPos: { x: '2535', y: '1020' },
                 signalDirectionOnMap: 'right',
@@ -5080,7 +5106,12 @@ export const SCREEN3_DATA: ScreenData.ScreenDataProps = {
                     name: 'Witonia',
                     prefix: 'Wi',
                     pos: { x: 1660, y: 1480 },
-                    posFlipped: { x: 1660, y: 1585 }
+                    posFlipped: { x: 1660, y: 1615 }
+                },
+                dispatchingPost: {
+                    type: 'computer',
+                    pos: { x: 1647, y: 1575 },
+                    rotation: 0
                 },
                 platforms: [
                     { label: 'Peron II', width: 50, height: 10, pos: { x: 1635, y: 1515 } },

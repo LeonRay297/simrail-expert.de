@@ -119,3 +119,10 @@
   font-display: swap;
   src: url('/assets/fonts/Sora-VariableFont.ttf') format('truetype');
 }
+
+@font-face {
+  font-family: 'DIN1451 Mittelschrift DB';
+  font-weight: 100 900;
+  font-display: swap;
+  src: url('/assets/fonts/DIN1451MittelschriftDB.ttf');
+}

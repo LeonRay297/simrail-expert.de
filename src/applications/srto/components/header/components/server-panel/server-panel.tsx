@@ -87,9 +87,9 @@ export function ServerPanel({
                             <span>Trains</span>
                             <span>%</span>
                         </div>
-                        <ServerOption code='pl1' extra='BEZ WYDARZEŃ' {...ServerOptionObj} />
+                        <ServerOption code='pl1' {...ServerOptionObj} />
                         <ServerOption code='pl2' {...ServerOptionObj} />
-                        <ServerOption code='pl3' {...ServerOptionObj} />
+                        <ServerOption code='pl3' extra='BEZ WYDARZEŃ' {...ServerOptionObj} />
                         <ServerOption code='pl5' {...ServerOptionObj} />
                     </div>
                 </div>

@@ -1,3 +1,4 @@
+import { ServerTimeOffset } from "../components/header/header-new";
 import { SimRailDataTypes } from "../types/simrail-api";
 import { Screen } from '../types/types';
 
@@ -244,20 +245,21 @@ export const screenList: Screen[] = [
   },
 ]
 
-export const serverTimeOffset = {
-    "cz1": +2,
-    "de1": +2,
+//? ONLY USE AS A FALLBACK IF API NOT AVAILABLE
+export const serverTimeOffsetFallback: ServerTimeOffset = {
+    "cz1": 1,
+    "de1": 1,
     "de2": -5,
     "de3": -2,
-    "fr1": +2,
-    "int1": +1,
-    "int2": +2,
+    "fr1": 1,
+    "int1": 0,
+    "int2": 1,
     "int3": -8,
-    "int4": +12,
-    "int5": +2,
+    "int4": 12,
+    "int5": 1,
     "int9": -3,
-    "pl1": -6,
-    "pl2": -2,
-    "pl3": +2,
-    "pl5": +8,
+    "pl1": -7,
+    "pl2": -3,
+    "pl3": 1,
+    "pl5": 7
 }

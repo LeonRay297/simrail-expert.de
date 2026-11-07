@@ -44,9 +44,9 @@ if (process.env.NODE_ENV === 'development' && (module as any).hot) {
 // }
 
 const SCREEN_DIMENSIONS: Record<ScreenId, { width: number, height: number }> = {
-    'screen1': { width: 2560, height: 1680 },
-    'screen2': { width: 2560, height: 1520 },
-    'screen3': { width: 2560, height: 2700 },
+    'screen1': { width: 2560, height: 1800 },
+    'screen2': { width: 2560, height: 1820 },
+    'screen3': { width: 2560, height: 2500 },
     'screen4': { width: 2560, height: 1800 },
     'screen5': { width: 0, height: 0 },
     'screen6': { width: 0, height: 0 },

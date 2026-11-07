@@ -12,6 +12,8 @@ const SimRailExpert_PrivacyPolicy = lazy(() => import('./privacyPolicy/privacy-p
 
 // const SimRailExpert_LandingPage = lazy(() => import('./landingpage/landingpage'));
 // const SimRailExpert_ElectronicTimetable = lazy(() => import('./applications/ebula/main'));
+// const SimRailExpert_DEVONLY_SSDCreator = lazy(() => import('./applications/ebula/ssdcreator/main'))
+// const SimRailExpert_FISFT95 = lazy(() => import('./applications/ft95/main'))
 // const SimRailExpert_TestDevApplication = lazy(() => import('./applications/test/main'));
 
 root.render(
@@ -19,12 +21,16 @@ root.render(
     <BrowserRouter>
       <Suspense fallback={null}>
         <Routes>
-          {/* <Route path='/' element={<SimRailExpert_LandingPage />} /> */}
           <Route path='/' element={<Navigate to={'/projects/srto'} replace />} />
           <Route path='/projects/srto' element={<SimRailExpert_Application_SRTO />} />
           <Route path='/privacy-policy/' element={<SimRailExpert_PrivacyPolicy />} />
-          {/* <Route path='/projects/ebula' element={<SimRailExpert_ElectronicTimetable />} /> */}
-          {/* <Route path='/test' element={<SimRailExpert_TestDevApplication />} /> */}
+
+
+          {/* <Route path='/' element={<SimRailExpert_LandingPage />} /> */}
+          {/* <Route path='/dev/ebula' element={<SimRailExpert_ElectronicTimetable />} /> */}
+          {/* <Route path='/dev/ssd' element={<SimRailExpert_DEVONLY_SSDCreator />}/> */}
+          {/* <Route path='/dev/fis' element={<SimRailExpert_FISFT95/>} /> */}
+          {/* <Route path='/dev/test' element={<SimRailExpert_TestDevApplication />} /> */}
 
         </Routes>
       </Suspense>

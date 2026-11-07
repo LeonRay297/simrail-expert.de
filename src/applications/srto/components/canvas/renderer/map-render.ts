@@ -156,14 +156,6 @@ function parseCommand(token: string, state: ParserState): void {
         return;
     }
 
-    if (token.toUpperCase().startsWith('LINE')) {
-        const coords = token.slice(4).split(',');
-        state.commands.push(`L${coords[0]},${coords[1]}`)
-        state.currentX = parseFloat(coords[0]);
-        state.currentY = parseFloat(coords[1] || coords[0]);
-        return;
-    }
-
     if (token.toUpperCase().startsWith('SP')) {
         const direction = token[2].toUpperCase();
         const distance = parseFloat(token.slice(3));
@@ -186,18 +178,47 @@ function parseCommand(token: string, state: ParserState): void {
         return;
     }
 
-    if (token.toUpperCase().startsWith('L')) {
-        const distance = parseFloat(token.slice(2));
-        const direction = token.toUpperCase().slice(1, 2);
+    if (token.toUpperCase().startsWith('LINE')) {
+        const coords = token.slice(4).split(',');
+        state.commands.push(`L${coords[0]},${coords[1]}`)
+        state.currentX = parseFloat(coords[0]);
+        state.currentY = parseFloat(coords[1] || coords[0]);
+        return;
+    }
+
+    if (token.toUpperCase().startsWith('D') && !token.toUpperCase().startsWith('DOT') && !token.toUpperCase().startsWith('DERAILER')) {
+        const direction = token.slice(1, 3);
+        const { 0: xLength, 1: yLength } = token.slice(3).split("-").map(e => parseFloat(e));
+
         switch (direction) {
-            case 'U':
-                state.commands.push(`L${state.currentX},${state.currentY - distance}`);
-                state.currentY = state.currentY - distance;
+            case "LU":
+                state.commands.push(`L${state.currentX - xLength},${state.currentY - yLength}`)
+                state.currentX = state.currentX - xLength;
+                state.currentY = state.currentY - yLength;
                 break;
-            case 'D':
-                state.commands.push(`L${state.currentX},${state.currentY + distance}`);
-                state.currentY = state.currentY + distance;
+            case "LD":
+                state.commands.push(`L${state.currentX - xLength},${state.currentY + yLength}`)
+                state.currentX = state.currentX - xLength;
+                state.currentY = state.currentY + yLength;
+                break
+            case "RU":
+                state.commands.push(`L${state.currentX + xLength},${state.currentY - yLength}`)
+                state.currentX = state.currentX + xLength;
+                state.currentY = state.currentY - yLength;
                 break;
+            case "RD":
+                state.commands.push(`L${state.currentX + xLength},${state.currentY + yLength}`)
+                state.currentX = state.currentX + xLength;
+                state.currentY = state.currentY + yLength;
+                break
+        }
+        return;
+    }
+
+    if (token.toUpperCase().startsWith('L')) {
+        const direction = token.toUpperCase().slice(1, 2);
+        const distance = parseFloat(token.slice(2));
+        switch (direction) {
             case 'L':
                 state.commands.push(`L${state.currentX - distance},${state.currentY}`);
                 state.currentX = state.currentX - distance;
@@ -205,6 +226,14 @@ function parseCommand(token: string, state: ParserState): void {
             case 'R':
                 state.commands.push(`L${state.currentX + distance},${state.currentY}`);
                 state.currentX = state.currentX + distance;
+                break;
+            case 'U':
+                state.commands.push(`L${state.currentX},${state.currentY - distance}`);
+                state.currentY = state.currentY - distance;
+                break;
+            case 'D':
+                state.commands.push(`L${state.currentX},${state.currentY + distance}`);
+                state.currentY = state.currentY + distance;
                 break;
         }
         return;
@@ -267,7 +296,7 @@ function parseCommand(token: string, state: ParserState): void {
         return;
     }
 
-    //! STATE OF currentX or currentY does not move on this command // use this as the last command in the command chain
+    //& STATE OF currentX or currentY does not move on this command // use this as the last command in the command chain
     if (token.toUpperCase().startsWith('TEND')) {
         state.commands.push(`L${state.currentX + 10},${state.currentY + 10}`)
         return;
@@ -294,7 +323,7 @@ function parseCommand(token: string, state: ParserState): void {
         return;
     }
 
-    //! COMMANDS ONLY FOR NPT-TRACKS
+    //& COMMANDS ONLY FOR NPT-TRACKS
     if (token.toUpperCase().startsWith('SS')) {
         const direction = token.slice(2);
         switch (direction) {

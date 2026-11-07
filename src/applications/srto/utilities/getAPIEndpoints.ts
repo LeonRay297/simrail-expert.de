@@ -1,6 +1,6 @@
 import { SimRailDataTypes } from "../types/simrail-api";
 
-type API_ENDPOINT = 'server' | 'trains' | 'stations' | 'steamuser' | 'delays' | 'playerCount' | 'getAllTimetables' | 'getAllTimetables_train' | 'getEDRTimetables'
+type API_ENDPOINT = 'server' | 'trains' | 'stations' | 'steamuser' | 'delays' | 'playerCount' | 'serverTimeOffset' | 'getAllTimetables' | 'getAllTimetables_train' | 'getEDRTimetables'
 const API_URL = (param1: string, param2: number): Record<API_ENDPOINT, string> => ({
     'server': 'https://panel.simrail.eu:8084/servers-open',
     'trains': `https://panel.simrail.eu:8084/trains-open?serverCode=${param1}`,
@@ -9,10 +9,11 @@ const API_URL = (param1: string, param2: number): Record<API_ENDPOINT, string> =
     //? this is own api endpoint at api.simrail-expert.de
     'delays': `https://api.simrail-expert.de/api/srto/trainDelays/${param1}-delays.json`,
     'playerCount': `https://api.simrail-expert.de/api/srto/playerCount/player-count.json`,
-    //! LOCAL ENDPOINT - ONLY FOR TESTING
-    'getAllTimetables': `http://25.41.92.247:8080/api/getAllTimetables?serverCode=${param1}`,
-    'getAllTimetables_train': `http://25.41.92.247:8080/api/getAllTimetables?serverCode=${param1}&train=${param2}`,
-    'getEDRTimetables': `http://25.41.92.247:8080/api/getEDRTimetables?serverCode=${param1}`,
+    'serverTimeOffset': 'https://api.simrail-expert.de/api/simrail/time-offset.json',
+    //& LOCAL ENDPOINT - ONLY FOR TESTING
+    'getAllTimetables': `http://127.0.0.1:3101/api/getAllTimetables?server=${param1}`,
+    'getAllTimetables_train': `http://127.0.0.1:3101/api/getAllTimetables?server=${param1}&train=${param2}`,
+    'getEDRTimetables': `http://127.0.0.1:3101/api/getEDRTimetables?server=${param1}`,
 });
 
 export async function getAPIEndpoint(endpoint: API_ENDPOINT, signal?: AbortSignal, param1?: string, param2?: number) {
