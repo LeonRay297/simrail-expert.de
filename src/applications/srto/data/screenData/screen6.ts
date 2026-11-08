@@ -9,6 +9,150 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "DP_DABROWAGORNICZAPOLUDNIOWA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T3 left
+                    'M1650,720 LR30',
+                    // T3 right
+                    'M1900,720 LR30',
+                    // track below T2
+                    'M1725,740 SWDN20 LR35 SPR10 LR100 SPR10 LR140 SWUP20',
+                    'M1745,760 SWDN20 LR150 SWUP20',
+                    'M1765,780 SWDN20 LR15',
+                    'M1845,780 SWDN20 LR15',
+                    // track below T2 last
+                    'M2020,760 LR20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T1
+                    'M1630,700 LR120 SPR10 LR100 SPR10 LR200',
+                    // T2
+                    'M1630,740 LR120 SPR10 LR100 SPR10 LR200',
+                    // T3 - T2 SW near Peron on left
+                    'M1670,700 SWDN20 LR75 SPR10 LR100 SPR10 LR35 SWDN20',
+                    // SW on left T2 - T3 - T1
+                    'M1685,740 SWUP20 LR35 SWUP20',
+                    // SW on left T3 - T2
+                    'M1705,720 SWDN20',
+                    // SW near Peron on left
+                    'M1885,720 SWUP20',
+                    // SW near Peron on right
+                    'M2035,740 LR10 SWUP40',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'DP1_M',
+                signalPos: { x: '1630', y: '700' },
+                trainPos: { x: '1615', y: '700' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP1_K',
+                signalPos: { x: '1630', y: '740' },
+                trainPos: { x: '1615', y: '740' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP1_J',
+                signalPos: { x: '1750', y: '700' },
+                trainPos: { x: '1765', y: '700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP1_H3',
+                signalPos: { x: '1750', y: '720' },
+                trainPos: { x: '1765', y: '720' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP1_H',
+                signalPos: { x: '1750', y: '740' },
+                trainPos: { x: '1765', y: '740' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP1_G',
+                signalPos: { x: '1765', y: '760' },
+                trainPos: { x: '1780', y: '760' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP_B1',
+                signalPos: { x: '1870', y: '700' },
+                trainPos: { x: '1855', y: '700' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP_B3',
+                signalPos: { x: '1870', y: '720' },
+                trainPos: { x: '1855', y: '720' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP_C',
+                signalPos: { x: '1870', y: '740' },
+                trainPos: { x: '1855', y: '740' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },{
+                signalName: 'DP_D',
+                signalPos: { x: '1885', y: '760' },
+                trainPos: { x: '1870', y: '760' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP_A',
+                signalPos: { x: '2070', y: '700' },
+                trainPos: { x: '2085', y: '700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DP_L',
+                signalPos: { x: '2070', y: '740' },
+                trainPos: { x: '2085', y: '740' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Dąbrowa Górnicza Południowa',
+                    prefix: 'DP',
+                    pos: { x: 1840, y: 660 },
+                    posFlipped: { x: 1840, y: 830 }
+                },
+                platforms: [
+                    { label: 'Peron I', width: 80, height: 30, pos: { x: 1960, y: 705 } },
+                ],
+                trackLabels: [
+                    { text: '1', pos: { x: 1810, y: 700 } },
+                    { text: '3', pos: { x: 1810, y: 720 } },
+                    { text: '2', pos: { x: 1810, y: 740 } },
+                ]
+            },
+        ]
+    },
+
     "Kzl_KOZIOL": {
         "TRACKS": [
             {
@@ -175,7 +319,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     name: 'D.G. Towarowa',
                     prefix: 'DTA',
                     pos: { x: 1890, y: 140 },
-                    posFlipped: { x: 1800, y: 270 }
+                    posFlipped: { x: 1760, y: 270 }
                 },
             },
         ]
