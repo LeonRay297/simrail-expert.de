@@ -9,6 +9,77 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "Ju_JULIUSZ": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // SW6
+                    'M690,220 SWDN20 LR50',
+                    // SW3/4cd
+                    'M650,260 LR40,SWUP20 LR15 SWUP20 LR15 SWUP20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // TOR 1W - T1
+                    'M630,200 LR140',
+                    // TOR 2W - T2
+                    'M630,220 LR140',
+                    // SW7/8 SW 1/2
+                    'M650,200 SWDN20 LR95 SWUP20',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'Sl_J',
+                signalPos: { x: '630', y: '200' },
+                trainPos: { x: '615', y: '200' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sl_K',
+                signalPos: { x: '630', y: '220' },
+                trainPos: { x: '615', y: '220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sl_C',
+                signalPos: { x: '770', y: '200' },
+                trainPos: { x: '785', y: '200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sl_B',
+                signalPos: { x: '770', y: '220' },
+                trainPos: { x: '785', y: '220' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Juliusz',
+                    prefix: 'Ju',
+                    pos: { x: 700, y: 170 },
+                    posFlipped: { x: 700, y: 290 }
+                },
+                dispatchingPost: {
+                    type: 'relay',
+                    pos: { x: 655, y: 230 },
+                    rotation: 0,
+                },
+            },
+        ]
+    },
     "Dra_DOROTA": {
         "TRACKS": [
             {
@@ -120,7 +191,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     name: 'Dorota',
                     prefix: 'Dra',
                     pos: { x: 240, y: 610 },
-                    posFlipped: { x: 340, y: 820 }
+                    posFlipped: { x: 240, y: 820 }
                 },
                 dispatchingPost: {
                     type: 'relay',
