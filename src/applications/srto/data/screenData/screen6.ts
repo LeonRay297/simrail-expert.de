@@ -9,6 +9,234 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "SDn_SOSNOWIECDANDOWKA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T3 - SW T3 right to T5
+                    'M1730,1220 LR50 SPR10 LR140 SPR10 LR35 SWUP20',
+                    // SW T3 left
+                    'M1740,1200 SWDN20',
+                    'M1760,1240 SWUP20',
+                    // SW T3 right
+                    'M1955,1220 SWDN20',
+                    // below T2 - 1
+                    'M1670,1280 LR100 SPR10 LR150 SPR10 LR15 SWUP20',
+                    // below T2 - 2
+                    'M1660,1320 LR15 SWUP20 LR50',
+                    // SW below T2 - 2 right
+                    'M2045,1320 LR15 SWUP20',
+                    // below T2 - 4 & below T2 - 2 right
+                    'M1690,1280 SWDN20 LR15 SWDN40 LR215 SPR10 LR55 SWUP40 LR80',
+                    // below T2 - 5
+                    'M1750,1340 SWDN20 LR175 SPR10 LR15 SWUP20',
+                    // below T2 - 6
+                    'M1730,1340 SWDN40 LR195 SPR10 LR35 SWUP40',
+                    'M1750,1380 SWDN20 LR85',
+                    'M1780,1420 LR15 SWUP20',
+                    'M1820,1400 SWDN20 LR15',
+
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T5
+                    'M1630,1200 LR150 SPR10 LR140 SPR10 LR140',
+                    // T1
+                    'M1630,1240 LR150 SPR10 LR290',
+                    // T2
+                    'M1630,1260 LR150 SPR10 LR140 SPR10 LR140',
+                    // SW T2 left
+                    'M1650,1260 SWUP20',
+                    // below T2 - 2 & SW to T1 T5 on right
+                    'M1670,1200 SWDN40 LR15 SWDN20 LR15 SWDN20 LR15 SWDN20 LR35 SPR10 LR150 SPR10 LR75 SWUP40 LR15 SWUP20 LR15 SWUP40',
+                    // below T2 - 3
+                    'M1750,1300 SWDN20 LR15 SPR10 LR150 SPR10 LR15 SWUP20'
+
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'SDn_W',
+                signalPos: { x: '1630', y: '1200' },
+                trainPos: { x: '1615', y: '1200' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_Sz1N', //? SDn_X
+                signalPos: { x: '1630', y: '1240' },
+                trainPos: { x: '1615', y: '1240' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_Z',
+                signalPos: { x: '1630', y: '1260' },
+                trainPos: { x: '1615', y: '1260' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_N',
+                signalPos: { x: '1780', y: '1200' },
+                trainPos: { x: '1795', y: '1200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_O',
+                signalPos: { x: '1780', y: '1220' },
+                trainPos: { x: '1795', y: '1220' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_P',
+                signalPos: { x: '1780', y: '1240' },
+                trainPos: { x: '1795', y: '1240' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_R',
+                signalPos: { x: '1780', y: '1260' },
+                trainPos: { x: '1795', y: '1260' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_S',
+                signalPos: { x: '1770', y: '1280' },
+                trainPos: { x: '1785', y: '1280' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_T',
+                signalPos: { x: '1770', y: '1300' },
+                trainPos: { x: '1785', y: '1300' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_U',
+                signalPos: { x: '1770', y: '1320' },
+                trainPos: { x: '1785', y: '1320' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_D',
+                signalPos: { x: '1940', y: '1200' },
+                trainPos: { x: '1925', y: '1200' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_E',
+                signalPos: { x: '1940', y: '1220' },
+                trainPos: { x: '1925', y: '1220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_F',
+                signalPos: { x: '1940', y: '1260' },
+                trainPos: { x: '1925', y: '1260' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_G',
+                signalPos: { x: '1940', y: '1280' },
+                trainPos: { x: '1925', y: '1280' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_H',
+                signalPos: { x: '1940', y: '1300' },
+                trainPos: { x: '1925', y: '1300' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_J',
+                signalPos: { x: '1940', y: '1320' },
+                trainPos: { x: '1925', y: '1320' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_K',
+                signalPos: { x: '1940', y: '1340' },
+                trainPos: { x: '1925', y: '1340' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_L',
+                signalPos: { x: '1940', y: '1360' },
+                trainPos: { x: '1925', y: '1360' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn1_M',
+                signalPos: { x: '1940', y: '1380' },
+                trainPos: { x: '1925', y: '1380' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_A',
+                signalPos: { x: '2080', y: '1200' },
+                trainPos: { x: '2095', y: '1200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_B',
+                signalPos: { x: '2080', y: '1240' },
+                trainPos: { x: '2095', y: '1240' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SDn_C',
+                signalPos: { x: '2080', y: '1260' },
+                trainPos: { x: '2095', y: '1260' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Sosnowiec Dańdówka',
+                    prefix: 'SDn',
+                    pos: { x: 1850, y: 1160 },
+                    posFlipped: { x: 1850, y: 1440 }
+                },
+                platforms: [
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 1795, y: 1185 } },
+                    { label: 'Peron II', width: 80, height: 10, pos: { x: 1795, y: 1225 } },
+                ],
+                trackLabels: [
+                    { text: '5', pos: { x: 1860, y: 1200 } },
+                    { text: '3', pos: { x: 1860, y: 1220 } },
+                    { text: '1', pos: { x: 1860, y: 1240 } },
+                    { text: '2', pos: { x: 1860, y: 1260 } },
+                ]
+            },
+        ]
+    },
+
     "DS_DABROWAGORNICZASTREMIESZYCE": {
         "TRACKS": [
             {
@@ -66,8 +294,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1050', y: '700' },
                 trainPos: { x: '1065', y: '700' },
                 trainPosDistance: [
-                    { distanceToSignal: 250, x: 1065, y: 700 },
-                    { distanceToSignal: 500, x: 1165, y: 700 },
+                    { distanceToSignal: 250, x: 1165, y: 700 },
+                    { distanceToSignal: 100, x: 1065, y: 700 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -77,8 +305,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1050', y: '720' },
                 trainPos: { x: '1065', y: '720' },
                 trainPosDistance: [
-                    { distanceToSignal: 300, x: 1065, y: 720 },
-                    { distanceToSignal: 500, x: 1165, y: 720 },
+                    { distanceToSignal: 300, x: 1165, y: 720 },
+                    { distanceToSignal: 200, x: 1065, y: 720 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -88,8 +316,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1050', y: '740' },
                 trainPos: { x: '1065', y: '740' },
                 trainPosDistance: [
-                    { distanceToSignal: 360, x: 1065, y: 740 },
-                    { distanceToSignal: 500, x: 1165, y: 740 },
+                    { distanceToSignal: 360, x: 1165, y: 740 },
+                    { distanceToSignal: 200, x: 1065, y: 740 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -127,8 +355,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1270', y: '700' },
                 trainPos: { x: '1255', y: '700' },
                 trainPosDistance: [
-                    { distanceToSignal: 380, x: 1255, y: 700 },
-                    { distanceToSignal: 500, x: 1155, y: 700 },
+                    { distanceToSignal: 380, x: 1155, y: 700 },
+                    { distanceToSignal: 200, x: 1255, y: 700 },
                 ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
@@ -138,8 +366,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1270', y: '720' },
                 trainPos: { x: '1255', y: '720' },
                 trainPosDistance: [
-                    { distanceToSignal: 380, x: 1255, y: 720 },
-                    { distanceToSignal: 500, x: 1155, y: 720 },
+                    { distanceToSignal: 380, x: 1155, y: 720 },
+                    { distanceToSignal: 200, x: 1255, y: 720 },
                 ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
@@ -149,8 +377,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1270', y: '740' },
                 trainPos: { x: '1255', y: '740' },
                 trainPosDistance: [
-                    { distanceToSignal: 380, x: 1255, y: 740 },
-                    { distanceToSignal: 500, x: 1155, y: 740 },
+                    { distanceToSignal: 380, x: 1155, y: 740 },
+                    { distanceToSignal: 200, x: 1255, y: 740 },
                 ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
@@ -278,8 +506,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1750', y: '700' },
                 trainPos: { x: '1765', y: '700' },
                 trainPosDistance: [
-                    { distanceToSignal: 750, x: 1765, y: 700 },
-                    { distanceToSignal: 1000, x: 1950, y: 700 },
+                    { distanceToSignal: 750, x: 1950, y: 700 },
+                    { distanceToSignal: 300, x: 1765, y: 700 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -289,8 +517,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1750', y: '720' },
                 trainPos: { x: '1765', y: '720' },
                 trainPosDistance: [
-                    { distanceToSignal: 750, x: 1765, y: 740 },
-                    { distanceToSignal: 1000, x: 1950, y: 740 },
+                    { distanceToSignal: 750, x: 1950, y: 740 },
+                    { distanceToSignal: 300, x: 1765, y: 740 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -443,8 +671,6 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     'M1720,300 LR150 UTLU60 LL100',
                     'M1720,320 LR175 SWUP80 LR100',
                     'M1720,340 LR162.5 LINE1885,335 LU10 SPU10 LU90 SPU30 LU10 LINE1882.5,180 LL112.5',
-                    // 'M1720,340 LR175 SWUP100 LR100',
-
                 ]
             },
             {
@@ -1115,8 +1341,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '210', y: '960' },
                 trainPos: { x: '225', y: '960' },
                 trainPosDistance: [
-                    { distanceToSignal: 680, x: 225, y: 960 },
-                    { distanceToSignal: 1000, x: 305, y: 960 },
+                    { distanceToSignal: 680, x: 305, y: 960 },
+                    { distanceToSignal: 300, x: 225, y: 960 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
@@ -1126,8 +1352,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '210', y: '980' },
                 trainPos: { x: '225', y: '980' },
                 trainPosDistance: [
-                    { distanceToSignal: 600, x: 225, y: 980 },
-                    { distanceToSignal: 1000, x: 305, y: 980 },
+                    { distanceToSignal: 600, x: 305, y: 980 },
+                    { distanceToSignal: 300, x: 225, y: 980 },
                 ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
