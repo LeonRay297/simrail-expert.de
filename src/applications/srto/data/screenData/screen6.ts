@@ -9,6 +9,127 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "Dra_DOROTA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // TOR 1J - TB
+                    'M150,680 LR70',
+                    // SW28
+                    'M290,640 LR15 SWDN40',
+                    // SW9/10 SW15/16
+                    'M210,760 SWUP20',
+                    'M265,760 SWUP20',
+                    'M195,760 LR85'
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // TOR 1S - JA
+                    'M150,660 LR115 SWDN20',
+                    // TB - TOR 1W
+                    'M200,680 LR130',
+                    // TOR 1M - TC - TOR 1P
+                    'M170,700 LR160',
+                    // TOR 2M - TD - TOR 2P
+                    'M170,720 LR160',
+                    // TOR 2S - TE - TOR 2W
+                    'M150,740 LR180',
+                    // SW7/8 - SW11/12 - SW24/25
+                    'M190,660 SWDN20 LR35 SWDN20 LR50 SWUP20',
+                    // SW14/13 - SW26/27
+                    'M230,740 SWUP20 LR50 SWDN20',
+                    // middle CORSS
+                    'M250,700 CROSS',
+
+                ]
+            }
+        ],
+    "SIGNALS": [
+            {
+                signalName: 'Dra_A',
+                signalPos: { x: '150', y: '660' },
+                trainPos: { x: '135', y: '660' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_B',
+                signalPos: { x: '150', y: '680' },
+                trainPos: { x: '135', y: '680' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_C',
+                signalPos: { x: '170', y: '700' },
+                trainPos: { x: '155', y: '700' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_D',
+                signalPos: { x: '170', y: '720' },
+                trainPos: { x: '155', y: '720' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_E',
+                signalPos: { x: '150', y: '740' },
+                trainPos: { x: '135', y: '740' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_M',
+                signalPos: { x: '330', y: '680' },
+                trainPos: { x: '345', y: '680' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_L',
+                signalPos: { x: '330', y: '700' },
+                trainPos: { x: '345', y: '700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_K',
+                signalPos: { x: '330', y: '720' },
+                trainPos: { x: '345', y: '720' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Dra_J',
+                signalPos: { x: '330', y: '740' },
+                trainPos: { x: '345', y: '740' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Dorota',
+                    prefix: 'Dra',
+                    pos: { x: 240, y: 610 },
+                    posFlipped: { x: 340, y: 820 }
+                },
+                dispatchingPost: {
+                    type: 'relay',
+                    pos: { x: 250, y: 770 },
+                    rotation: 0,
+                },
+            },
+        ]
+    },
     "DW_DABROWAGORNICZAWSCHODNIA": {
         "TRACKS": [
             {
@@ -198,7 +319,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 annotationType: 'station',
                 stationLabel: {
                     name: 'Dąbrowa Górnicza Wschodnia',
-                    prefix: 'Sł',
+                    prefix: 'DW',
                     pos: { x: 340, y: 910 },
                     posFlipped: { x: 340, y: 1200 }
                 },
