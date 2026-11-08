@@ -9,6 +9,178 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "Kzl_KOZIOL": {
+        "TRACKS": [
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M1630,300 LR80 SPR10',
+                    'M1630,320 LR80 SPR10',
+                    'M1650,300 SWDN20 LR35 SWDN20 LR15 SPR10',
+                    'M1670,320 SWUP20'
+
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'Kzl_B',
+                signalPos: { x: '1630', y: '300' },
+                trainPos: { x: '1615', y: '300' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Kzl_C',
+                signalPos: { x: '1630', y: '320' },
+                trainPos: { x: '1615', y: '320' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Kzl_L',
+                signalPos: { x: '1710', y: '300' },
+                trainPos: { x: '1725', y: '300' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Kzl_O',
+                signalPos: { x: '1710', y: '320' },
+                trainPos: { x: '1725', y: '320' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Kzl_J',
+                signalPos: { x: '1710', y: '340' },
+                trainPos: { x: '1725', y: '340' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Kozioł',
+                    prefix: 'Kzl',
+                    pos: { x: 1670, y: 270 },
+                    posFlipped: { x: 1670, y: 370 }
+                },
+            },
+        ]
+    },
+    "KOZIOL_DTA_DGTOWAROWA": {
+        "TRACKS": [
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    // KOZIOL - DGTOWAROWA
+                    'M1720,300 LR150 UTLU60 LL100',
+                    'M1720,320 LR162.5 LINE1885,315 LU90 SPU30 LU10 LINE1882.5,180 LL112.5',
+                    'M1720,340 LR175 SWUP100 LR100',
+
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M1680,200 LR80 SPR10 LR230 SPR10 LR80',
+                    'M1680,220 LR80 SPR10 LR230 SPR10 LR80',
+                    // To KOZIOL
+                    'M1720,200 SWDN20 LR15 SWDN20',
+                    'M1680,240 LR80',
+                    'M1700,200 SWUP20 LR55',
+                    'M2010,240 LR15 SWUP20 LR15 SWUP20 LR15 SWDN20'
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'DTA_Z',
+                signalPos: { x: '1680', y: '220' },
+                trainPos: { x: '1665', y: '220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_E2',
+                signalPos: { x: '1760', y: '180' },
+                trainPos: { x: '1775', y: '180' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_F1',
+                signalPos: { x: '1760', y: '200' },
+                trainPos: { x: '1775', y: '200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_F2',
+                signalPos: { x: '1760', y: '220' },
+                trainPos: { x: '1775', y: '220' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_E1',
+                signalPos: { x: '1760', y: '240' },
+                trainPos: { x: '1775', y: '240' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_C1',
+                signalPos: { x: '2010', y: '200' },
+                trainPos: { x: '1995', y: '200' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_C2',
+                signalPos: { x: '2010', y: '220' },
+                trainPos: { x: '1995', y: '220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_D',
+                signalPos: { x: '2010', y: '240' },
+                trainPos: { x: '1995', y: '240' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_B',
+                signalPos: { x: '2090', y: '200' },
+                trainPos: { x: '2105', y: '200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DTA_A',
+                signalPos: { x: '2090', y: '220' },
+                trainPos: { x: '2105', y: '220' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'D.G. Towarowa',
+                    prefix: 'DTA',
+                    pos: { x: 1890, y: 140 },
+                    posFlipped: { x: 1800, y: 270 }
+                },
+            },
+        ]
+    },
+
     "O_OLKUSZ": {
         "TRACKS": [
             {
@@ -318,49 +490,49 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // SW6
-                    'M690,220 SWDN20 LR50',
+                    'M690,1220 SWDN20 LR50',
                     // SW3/4cd
-                    'M650,260 LR40,SWUP20 LR15 SWUP20 LR15 SWUP20',
+                    'M650,1260 LR40,SWUP20 LR15 SWUP20 LR15 SWUP20',
                 ]
             },
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // TOR 1W - T1
-                    'M630,200 LR140',
+                    'M630,1200 LR140',
                     // TOR 2W - T2
-                    'M630,220 LR140',
+                    'M630,1220 LR140',
                     // SW7/8 SW 1/2
-                    'M650,200 SWDN20 LR95 SWUP20',
+                    'M650,1200 SWDN20 LR95 SWUP20',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: 'Ju_H',
-                signalPos: { x: '630', y: '200' },
-                trainPos: { x: '615', y: '200' },
+                signalPos: { x: '630', y: '1200' },
+                trainPos: { x: '615', y: '1200' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ju_G',
-                signalPos: { x: '630', y: '220' },
-                trainPos: { x: '615', y: '220' },
+                signalPos: { x: '630', y: '1220' },
+                trainPos: { x: '615', y: '1220' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ju_A',
-                signalPos: { x: '770', y: '200' },
-                trainPos: { x: '785', y: '200' },
+                signalPos: { x: '770', y: '1200' },
+                trainPos: { x: '785', y: '1200' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ju_B',
-                signalPos: { x: '770', y: '220' },
-                trainPos: { x: '785', y: '220' },
+                signalPos: { x: '770', y: '1220' },
+                trainPos: { x: '785', y: '1220' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -371,12 +543,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Juliusz',
                     prefix: 'Ju',
-                    pos: { x: 700, y: 170 },
-                    posFlipped: { x: 700, y: 290 }
+                    pos: { x: 700, y: 1170 },
+                    posFlipped: { x: 700, y: 1290 }
                 },
                 dispatchingPost: {
                     type: 'relay',
-                    pos: { x: 655, y: 230 },
+                    pos: { x: 655, y: 1230 },
                     rotation: 0,
                 },
             },
