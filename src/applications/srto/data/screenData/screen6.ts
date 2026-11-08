@@ -9,6 +9,124 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "O_OLKUSZ": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T4
+                    'M1030,160 LR360',
+                    // T3
+                    'M1070,200 SWUP20 LR35 SPR10 LR100 SPR10 LR15 SWDN20',
+                    // Bottom tracks
+                    'M1090,240 SWDN20 LR210 SWUP20',
+                    'M1080,260 LR280',
+                    'M1180,280 LR15 SWUP20 LR15 SWDN20 LR15 SWDN20 LR15',
+                    'M1190,280 LR65',
+                    'M1340,260 SWUP20 LR15',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T1
+                    'M1030,200 LR80 SPR10 LR160 SPR10 LR100',
+                    // T2
+                    'M1030,220 LR250 SPR10 LR100',
+                    // T2 bottom track
+                    'M1050,200 SWDN20 LR15 SWDN20 LR35 SPR10 LR160 SPR10 LR35 SWUP20',
+                    // CROSS on Right
+                    'M1350,200 CROSS'
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'O1_H',
+                signalPos: { x: '1030', y: '220' },
+                trainPos: { x: '1015', y: '220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O1_G',
+                signalPos: { x: '1110', y: '180' },
+                trainPos: { x: '1125', y: '180' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O1_F',
+                signalPos: { x: '1110', y: '200' },
+                trainPos: { x: '1125', y: '200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O1_E',
+                signalPos: { x: '1110', y: '240' },
+                trainPos: { x: '1125', y: '240' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O_B3',
+                signalPos: { x: '1230', y: '180' },
+                trainPos: { x: '1215', y: '180' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O_B',
+                signalPos: { x: '1290', y: '200' },
+                trainPos: { x: '1275', y: '200' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O_C',
+                signalPos: { x: '1290', y: '220' },
+                trainPos: { x: '1275', y: '220' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O_D',
+                signalPos: { x: '1290', y: '240' },
+                trainPos: { x: '1275', y: '240' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'O_A',
+                signalPos: { x: '1390', y: '200' },
+                trainPos: { x: '1405', y: '200' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Olkusz',
+                    prefix: 'O',
+                    pos: { x: 1220, y: 130 },
+                    posFlipped: { x: 1220, y: 320 }
+                },
+                platforms: [
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 1130, y: 165 } },
+                    { label: 'Peron II', width: 140, height: 10, pos: { x: 1130, y: 205 } },
+                ],
+                trackLabels: [
+                    { text: '4', pos: { x: 1220, y: 160 } },
+                    { text: '3', pos: { x: 1170, y: 180 } },
+                    { text: '1', pos: { x: 1200, y: 200 } },
+                    { text: '2', pos: { x: 1200, y: 220 } },
+                ]
+            },
+        ]
+    },
     "SKz_SOSNOWIECKAZIMIERZ": {
         "TRACKS": [
             {
