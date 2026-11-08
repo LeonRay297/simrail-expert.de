@@ -15,13 +15,13 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // T3
-                    'M235,180 LR15 SPR10 LR100 SPR10 LR15 LINE390,175',
+                    'M1035,1180 LR15 SPR10 LR100 SPR10 LR15 LINE1190,1175',
                     // T4
-                    'M190,300 LR20 SPR10 LR100 SPR10 LR20',
+                    'M990,1300 LR20 SPR10 LR100 SPR10 LR20',
                     // T10
-                    'M235,320 SWDN40 LR15',
+                    'M1035,1320 SWDN40 LR15',
                     // T8
-                    'M255,320 SWDN20 LR15',
+                    'M1055,1320 SWDN20 LR15',
 
                 ]
             },
@@ -29,140 +29,139 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // TOR 1D - T1 - TOR 1S
-                    'M130,200 LR120 SPR10 LR100 SPR10 LR60',
+                    'M930,1200 LR120 SPR10 LR100 SPR10 LR60',
                     // TOR 1M - T2
-                    'M130,280 LR80 SPR10 LR100 SPR10 LR55 SWUP80',
+                    'M930,1280 LR80 SPR10 LR100 SPR10 LR55 SWUP80',
                     // T13
-                    'M150,200 SWDN20 LR15 SPR10 LR50 UTLD40 LL50',
-                    'M150,280 SWUP20 LR15',
+                    'M950,1200 SWDN20 LR15 SPR10 LR50 UTLD40 LL50',
+                    'M950,1280 SWUP20 LR15',
                     // T5
-                    'M220,200 SWUP40 LR25 SPR10 LR100 SPR10 LR35 SWDN40',
+                    'M1020,1200 SWUP40 LR25 SPR10 LR100 SPR10 LR35 SWDN40',
                     // T6
-                    'M170,280 SWDN20 LR15 SWDN20 LR15 SPR10 LR100 SPR10 LR15 SWUP20 LR15 SWUP20',
+                    'M970,1280 SWDN20 LR15 SWDN20 LR15 SPR10 LR100 SPR10 LR15 SWUP20 LR15 SWUP20',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: 'SKz_S',
-                signalPos: { x: '130', y: '200' },
-                trainPos: { x: '115', y: '200' },
+                signalPos: { x: '930', y: '1200' },
+                trainPos: { x: '915', y: '1200' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_T',
-                signalPos: { x: '130', y: '280' },
-                trainPos: { x: '115', y: '280' },
+                signalPos: { x: '930', y: '1280' },
+                trainPos: { x: '915', y: '1280' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_R',
-                signalPos: { x: '250', y: '160' },
-                trainPos: { x: '265', y: '160' },
+                signalPos: { x: '1050', y: '1160' },
+                trainPos: { x: '1065', y: '1160' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_P',
-                signalPos: { x: '250', y: '180' },
-                trainPos: { x: '265', y: '180' },
+                signalPos: { x: '1050', y: '1180' },
+                trainPos: { x: '1065', y: '1180' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_O',
-                signalPos: { x: '250', y: '200' },
-                trainPos: { x: '265', y: '200' },
+                signalPos: { x: '1050', y: '1200' },
+                trainPos: { x: '1065', y: '1200' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_N',
-                signalPos: { x: '170', y: '220' },
-                trainPos: { x: '185', y: '220' },
+                signalPos: { x: '970', y: '1220' },
+                trainPos: { x: '985', y: '1220' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_M',
-                signalPos: { x: '170', y: '260' },
-                trainPos: { x: '185', y: '260' },
+                signalPos: { x: '970', y: '1260' },
+                trainPos: { x: '985', y: '1260' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_L',
-                signalPos: { x: '210', y: '280' },
-                trainPos: { x: '225', y: '280' },
+                signalPos: { x: '1010', y: '1280' },
+                trainPos: { x: '1025', y: '1280' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_K',
-                signalPos: { x: '210', y: '300' },
-                trainPos: { x: '225', y: '300' },
+                signalPos: { x: '1010', y: '1300' },
+                trainPos: { x: '1025', y: '1300' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_J',
-                signalPos: { x: '210', y: '320' },
-                trainPos: { x: '225', y: '320' },
+                signalPos: { x: '1010', y: '1320' },
+                trainPos: { x: '1025', y: '1320' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_C',
-                signalPos: { x: '370', y: '160' },
-                trainPos: { x: '355', y: '160' },
+                signalPos: { x: '1170', y: '1160' },
+                trainPos: { x: '1155', y: '1160' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_D',
-                signalPos: { x: '370', y: '180' },
-                trainPos: { x: '355', y: '180' },
+                signalPos: { x: '1170', y: '1180' },
+                trainPos: { x: '1155', y: '1180' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_E',
-                signalPos: { x: '370', y: '200' },
-                trainPos: { x: '355', y: '200' },
+                signalPos: { x: '1170', y: '1200' },
+                trainPos: { x: '1155', y: '1200' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_F',
-                signalPos: { x: '330', y: '280' },
-                trainPos: { x: '315', y: '280' },
+                signalPos: { x: '1130', y: '1280' },
+                trainPos: { x: '1115', y: '1280' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_G',
-                signalPos: { x: '330', y: '300' },
-                trainPos: { x: '315', y: '300' },
+                signalPos: { x: '1130', y: '1300' },
+                trainPos: { x: '1115', y: '1300' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_H',
-                signalPos: { x: '330', y: '320' },
-                trainPos: { x: '315', y: '320' },
+                signalPos: { x: '1130', y: '1320' },
+                trainPos: { x: '1115', y: '1320' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_A',
-                signalPos: { x: '430', y: '200' },
-                trainPos: { x: '445', y: '200' },
+                signalPos: { x: '1230', y: '1200' },
+                trainPos: { x: '1245', y: '1200' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-
         ],
         "ANNOTATIONS": [
             {
@@ -170,27 +169,27 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Sosnowiec Kazimierz',
                     prefix: 'SKz',
-                    pos: { x: 280, y: 100 },
-                    posFlipped: { x: 280, y: 390 }
+                    pos: { x: 1080, y: 1100 },
+                    posFlipped: { x: 1080, y: 1390 }
                 },
                 dispatchingPost: {
                     type: 'relay',
-                    pos: { x: 370, y: 130 },
+                    pos: { x: 1170, y: 1130 },
                     rotation: 0,
                 },
                 platforms: [
-                    { label: 'Peron I', width: 80, height: 10, pos: { x: 230, y: 265 } },
-                    { label: 'Peron II', width: 80, height: 10, pos: { x: 270, y: 205 } },
-                    { label: 'Peron III', width: 80, height: 10, pos: { x: 270, y: 145 } },
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 1030, y: 1265 } },
+                    { label: 'Peron II', width: 80, height: 10, pos: { x: 1070, y: 1205 } },
+                    { label: 'Peron III', width: 80, height: 10, pos: { x: 1070, y: 1145 } },
                 ],
                 trackLabels: [
-                    { text: '5', pos: { x: 310, y: 160 } },
-                    { text: '3', pos: { x: 310, y: 180 } },
-                    { text: '1', pos: { x: 310, y: 200 } },
-                    { text: '13', pos: { x: 232.5, y: 240 } },
-                    { text: '2', pos: { x: 270, y: 280 } },
-                    { text: '4', pos: { x: 270, y: 300 } },
-                    { text: '6', pos: { x: 270, y: 320 } },
+                    { text: '5', pos: { x: 1110, y: 1160 } },
+                    { text: '3', pos: { x: 1110, y: 1180 } },
+                    { text: '1', pos: { x: 1110, y: 1200 } },
+                    { text: '13', pos: { x: 1032.5, y: 1240 } },
+                    { text: '2', pos: { x: 1070, y: 1280 } },
+                    { text: '4', pos: { x: 1070, y: 1300 } },
+                    { text: '6', pos: { x: 1070, y: 1320 } },
                 ]
             },
         ]
@@ -220,14 +219,14 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
         ],
         "SIGNALS": [
             {
-                signalName: 'Ju_G',
+                signalName: 'Ju_H',
                 signalPos: { x: '630', y: '200' },
                 trainPos: { x: '615', y: '200' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
-                signalName: 'Ju_H',
+                signalName: 'Ju_G',
                 signalPos: { x: '630', y: '220' },
                 trainPos: { x: '615', y: '220' },
                 signalDirectionOnMap: 'right',
@@ -247,7 +246,6 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-
         ],
         "ANNOTATIONS": [
             {
