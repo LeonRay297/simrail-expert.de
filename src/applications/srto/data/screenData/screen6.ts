@@ -740,16 +740,17 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Sławków',
                     prefix: 'Sł',
-                    pos: { x: 340, y: 1410 },
+                    pos: { x: 340, y: 1390 },
                     posFlipped: { x: 340, y: 1620 }
                 },
                 dispatchingPost: {
                     type: 'relay',
-                    pos: { x: 340, y: 1433 },
+                    pos: { x: 360, y: 1420 },
                     rotation: 180,
                 },
                 platforms: [
-                    { label: 'Peron II', width: 80, height: 10, pos: { x: 300, y: 1505 } },
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 320, y: 1445 } },
+                    { label: 'Peron II', width: 100, height: 10, pos: { x: 300, y: 1505 } },
                 ],
                 trackLabels: [
                     { text: '5', pos: { x: 380, y: 1460 } },
