@@ -9,6 +9,224 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "DW_DABROWAGORNICZAWSCHODNIA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // SW21 - T10
+                    'M155,1060 LR75 SWDN20 LR15 SPR10 LR100 SPR10 LR15 SWUP20',
+                    // SW21 - T12 - SW59cd/59ab
+                    'M170,1060 SWDN40 LR245 SWUP40',
+                    // T16
+                    'M190,1100 SWDN20 LR185 SWUP20',
+                    // T18
+                    'M210,1120 SWDN20 LR185 SWUP40',
+                    // T20
+                    'M365,1160 LR15 SWUP20',
+                    // T22
+                    'M440,1060 LR45',
+                    // T44
+                    'M465,1060 SWDN20 LR15',
+                    // SW66/67
+                    'M475,940 SWDN20',
+                    'M460,940 LR35'
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // TOR 1T - T1 - TOR 1S
+                    'M130,960 LR80 SPR10 LR200 SPR10 LR100',
+                    // TOR 2T - T2 - TOR 2S
+                    'M130,980 LR80 SPR10 LR200 SPR10 LR100',
+                    // TOR 1D - T4 - TOR 1K
+                    'M130,1020 LR120 SPR10 LR100 SPR10 LR160',
+                    // TOR 2D - T6 - TOR 2K
+                    'M130,1040 LR120 SPR10 LR100 SPR10 LR160',
+                    // SW1/2 - T8 - SW64/65
+                    'M150,960 SWDN20 LR15 SWDN40 LR15 SWDN20 LR15 SWDN20 LR35 SPR10 LR100 SPR10 LR35 SWUP20 LR15 SWUP20 LR55 SWUP40 LR15 SWUP20',
+                    // SW62cd/61ab - SW61cd/59ab - SW59cd/59ab
+                    'M390,1060 LR55 SWUP20 LR15 SWUP20',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'DW_A',
+                signalPos: { x: '130', y: '960' },
+                trainPos: { x: '115', y: '960' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_B',
+                signalPos: { x: '130', y: '980' },
+                trainPos: { x: '115', y: '980' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_C',
+                signalPos: { x: '130', y: '1020' },
+                trainPos: { x: '115', y: '1020' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_D',
+                signalPos: { x: '130', y: '1040' },
+                trainPos: { x: '115', y: '1040' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_F',
+                signalPos: { x: '210', y: '960' },
+                trainPos: { x: '225', y: '960' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_G',
+                signalPos: { x: '210', y: '980' },
+                trainPos: { x: '225', y: '980' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_H',
+                signalPos: { x: '250', y: '1020' },
+                trainPos: { x: '265', y: '1020' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_J',
+                signalPos: { x: '250', y: '1040' },
+                trainPos: { x: '265', y: '1040' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_K8',
+                signalPos: { x: '250', y: '1060' },
+                trainPos: { x: '265', y: '1060' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_K10',
+                signalPos: { x: '250', y: '1080' },
+                trainPos: { x: '265', y: '1080' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_R',
+                signalPos: { x: '430', y: '960' },
+                trainPos: { x: '415', y: '960' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_P',
+                signalPos: { x: '430', y: '980' },
+                trainPos: { x: '415', y: '980' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_O',
+                signalPos: { x: '370', y: '1020' },
+                trainPos: { x: '355', y: '1020' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_N',
+                signalPos: { x: '370', y: '1040' },
+                trainPos: { x: '355', y: '1040' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_M8',
+                signalPos: { x: '370', y: '1060' },
+                trainPos: { x: '355', y: '1060' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_M10',
+                signalPos: { x: '370', y: '1080' },
+                trainPos: { x: '355', y: '1080' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_T',
+                signalPos: { x: '530', y: '960' },
+                trainPos: { x: '545', y: '960' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_U',
+                signalPos: { x: '530', y: '980' },
+                trainPos: { x: '545', y: '980' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_W',
+                signalPos: { x: '530', y: '1020' },
+                trainPos: { x: '545', y: '1020' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DW_X',
+                signalPos: { x: '530', y: '1040' },
+                trainPos: { x: '545', y: '1040' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Dąbrowa Górnicza Wschodnia',
+                    prefix: 'Sł',
+                    pos: { x: 340, y: 910 },
+                    posFlipped: { x: 340, y: 1200 }
+                },
+                dispatchingPost: {
+                    type: 'relay',
+                    pos: { x: 135, y: 1070 },
+                    rotation: 0,
+                },
+                platforms: [
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 310, y: 965 } },
+                ],
+                trackLabels: [
+                    { text: '1', pos: { x: 320, y: 960 } },
+                    { text: '2', pos: { x: 320, y: 980 } },
+                    { text: '4', pos: { x: 310, y: 1020 } },
+                    { text: '6', pos: { x: 310, y: 1040 } },
+                    { text: '8', pos: { x: 310, y: 1060 } },
+                    { text: '10', pos: { x: 310, y: 1080 } },
+                    { text: '12', pos: { x: 310, y: 1100 } },
+                    { text: '16', pos: { x: 310, y: 1120 } },
+                    { text: '18', pos: { x: 310, y: 1140 } },
+                    { text: '20', pos: { x: 350, y: 1160 } },
+                    { text: '22', pos: { x: 500, y: 1060 } },
+                    { text: '24', pos: { x: 500, y: 1080 } },
+                ]
+            },
+        ]
+    },
     "Sl_SLAWKOW": {
         "TRACKS": [
             {
@@ -186,7 +404,9 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     // T201
                     'M130,1800 LR120 SWUP20 LR35 SPR10 LR140 SPR10 LR75 SWDN40 LR60',
                     // T203
-                    'M270,1780 SWUP20 LR15 SPR10 LR140 SPR10 LR15 SWDN20'
+                    'M270,1780 SWUP20 LR15 SPR10 LR140 SPR10 LR15 SWDN20',
+                    // T100 SW106ab/cd
+                    'M520,1860 LR25 SWUP20 LR15 SWUP60 LR15',
                 ]
             },
             {
@@ -206,8 +426,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     'M150,1900 SWDN20 LR75 M230,1920 SWDN20 LR15 SWDN20 LR15 SWDN20 LR15 SPR10 LR100 SPR10 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR35 SWUP20',
                     // T9
                     'M260,1820 LR50 SPR10 LR140 SPR10 LR20',
-                    // T7 - T100
-                    'M290,1820 SWDN20 LR15 SPR10 LR140 SPR10 LR15 SWDN20 LR20', // LR30 SWUP20 LR15 SWUP40 LR25
+                    // T7
+                    'M290,1820 SWDN20 LR15 SPR10 LR140 SPR10 LR15 SWDN20 LR20',
                 ]
             }
         ],
