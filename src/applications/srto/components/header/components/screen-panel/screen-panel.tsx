@@ -106,10 +106,10 @@ export function ScreenPanel({
                     </div>
                     <div
                         className={`${styles.screenOption} ${styles.soonOption} ${userOptions.selectedScreen.screenid === screenList[5].screenid ? styles.active : ''}`}
-                        // onClick={() => {
-                        //     setScreen(screenList[5]);
-                        //     togglePanel('screen');
-                        // }}
+                         onClick={() => {
+                             setScreen(screenList[5]);
+                             togglePanel('screen');
+                         }}
                     >
                         <div className={styles.screenBadge}>{`S6`}</div>
                         <div className={styles.screenTitle}>
