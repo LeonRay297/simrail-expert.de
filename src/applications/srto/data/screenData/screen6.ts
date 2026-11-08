@@ -9,6 +9,217 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "DS_DABROWAGORNICZASTREMIESZYCE": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T2 left SW
+                    'M930,720 LR20 SWDN20',
+                    // below T4 - 1
+                    'M1000,760 LR90 SPR10 LR100 SPR10 LR65',
+                    // below T4 - 2
+                    'M1070,760 SWDN20 LR15 SPR10 LR100 SPR10 LR45',
+                    // below T4 - 3
+                    'M1010,760 SWDN60 LR75 SPR10 LR100 SPR10 LR15 SWUP20',
+                    'M1070,800 SWDN20',
+                    // T4 right
+                    'M1300,740 LR25',
+                    // peron I left SW
+                    'M1010,700 SWUP20 LR15'
+
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T1
+                    'M930,700 LR120 SPR10 LR200 SPR10 LR100',
+                    // T2
+                    'M930,740 LR40 SWUP20 LR75 SPR10 LR200 SPR10 LR100',
+                    // SW T2 - T1 near peron on left
+                    'M1030,720 SWUP20',
+                    // SW T1 - T4 - SW T1 - SW T2
+                    'M990,700 SWDN20 LR15 SWDN20 LR35 SPR10 LR200 SPR10 LR35 SWUP20 LR15 SWUP20 LR15 SWDN20',
+                    // SW T4 -  playable track below T4 - SW T4
+                    'M1030,740 SWDN20 LR15 SWDN40 LR35 SPR10 LR100 SPR10 LR35 SWUP20 LR15 SWUP20 LR15 SWUP20'
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'DS_Z',
+                signalPos: { x: '930', y: '700' },
+                trainPos: { x: '915', y: '700' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_W',
+                signalPos: { x: '930', y: '740' },
+                trainPos: { x: '915', y: '740' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_V',
+                signalPos: { x: '1050', y: '700' },
+                trainPos: { x: '1065', y: '700' },
+                trainPosDistance: [
+                    { distanceToSignal: 250, x: 1065, y: 700 },
+                    { distanceToSignal: 500, x: 1165, y: 700 },
+                ],
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_U',
+                signalPos: { x: '1050', y: '720' },
+                trainPos: { x: '1065', y: '720' },
+                trainPosDistance: [
+                    { distanceToSignal: 300, x: 1065, y: 720 },
+                    { distanceToSignal: 500, x: 1165, y: 720 },
+                ],
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_Q',
+                signalPos: { x: '1050', y: '740' },
+                trainPos: { x: '1065', y: '740' },
+                trainPosDistance: [
+                    { distanceToSignal: 360, x: 1065, y: 740 },
+                    { distanceToSignal: 500, x: 1165, y: 740 },
+                ],
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_T',
+                signalPos: { x: '1090', y: '760' },
+                trainPos: { x: '1105', y: '760' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_S',
+                signalPos: { x: '1090', y: '780' },
+                trainPos: { x: '1105', y: '780' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_R',
+                signalPos: { x: '1090', y: '800' },
+                trainPos: { x: '1105', y: '800' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_P',
+                signalPos: { x: '1090', y: '820' },
+                trainPos: { x: '1105', y: '820' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_E',
+                signalPos: { x: '1270', y: '700' },
+                trainPos: { x: '1255', y: '700' },
+                trainPosDistance: [
+                    { distanceToSignal: 380, x: 1255, y: 700 },
+                    { distanceToSignal: 500, x: 1155, y: 700 },
+                ],
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_F',
+                signalPos: { x: '1270', y: '720' },
+                trainPos: { x: '1255', y: '720' },
+                trainPosDistance: [
+                    { distanceToSignal: 380, x: 1255, y: 720 },
+                    { distanceToSignal: 500, x: 1155, y: 720 },
+                ],
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_G',
+                signalPos: { x: '1270', y: '740' },
+                trainPos: { x: '1255', y: '740' },
+                trainPosDistance: [
+                    { distanceToSignal: 380, x: 1255, y: 740 },
+                    { distanceToSignal: 500, x: 1155, y: 740 },
+                ],
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_H',
+                signalPos: { x: '1210', y: '760' },
+                trainPos: { x: '1195', y: '760' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_J',
+                signalPos: { x: '1210', y: '780' },
+                trainPos: { x: '1195', y: '780' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_K',
+                signalPos: { x: '1210', y: '800' },
+                trainPos: { x: '1195', y: '800' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_L',
+                signalPos: { x: '1210', y: '820' },
+                trainPos: { x: '1195', y: '820' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_A',
+                signalPos: { x: '1370', y: '700' },
+                trainPos: { x: '1385', y: '700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'DS_B',
+                signalPos: { x: '1370', y: '720' },
+                trainPos: { x: '1385', y: '720' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Dąbrowa Górnicza Strzemieszyce',
+                    prefix: 'O',
+                    pos: { x: 1150, y: 650 },
+                    posFlipped: { x: 1150, y: 850 }
+                },
+                platforms: [
+                    { label: 'Peron I', width: 80, height: 10, pos: { x: 1080, y: 685 } },
+                    { label: 'Peron II', width: 100, height: 10, pos: { x: 1080, y: 725 } },
+                ],
+                trackLabels: [
+                    { text: '1', pos: { x: 1160, y: 700 } },
+                    { text: '2', pos: { x: 1160, y: 720 } },
+                    { text: '4', pos: { x: 1160, y: 740 } },
+                ]
+            },
+        ]
+    },
+
     "DP_DABROWAGORNICZAPOLUDNIOWA": {
         "TRACKS": [
             {
@@ -66,6 +277,10 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DP1_J',
                 signalPos: { x: '1750', y: '700' },
                 trainPos: { x: '1765', y: '700' },
+                trainPosDistance: [
+                    { distanceToSignal: 750, x: 1765, y: 700 },
+                    { distanceToSignal: 1000, x: 1950, y: 700 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -73,6 +288,10 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DP1_H3',
                 signalPos: { x: '1750', y: '720' },
                 trainPos: { x: '1765', y: '720' },
+                trainPosDistance: [
+                    { distanceToSignal: 750, x: 1765, y: 740 },
+                    { distanceToSignal: 1000, x: 1950, y: 740 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -222,8 +441,9 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 commands: [
                     // KOZIOL - DGTOWAROWA
                     'M1720,300 LR150 UTLU60 LL100',
-                    'M1720,320 LR162.5 LINE1885,315 LU90 SPU30 LU10 LINE1882.5,180 LL112.5',
-                    'M1720,340 LR175 SWUP100 LR100',
+                    'M1720,320 LR175 SWUP80 LR100',
+                    'M1720,340 LR162.5 LINE1885,335 LU10 SPU10 LU90 SPU30 LU10 LINE1882.5,180 LL112.5',
+                    // 'M1720,340 LR175 SWUP100 LR100',
 
                 ]
             },
@@ -894,6 +1114,10 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DW_F',
                 signalPos: { x: '210', y: '960' },
                 trainPos: { x: '225', y: '960' },
+                trainPosDistance: [
+                    { distanceToSignal: 680, x: 225, y: 960 },
+                    { distanceToSignal: 1000, x: 305, y: 960 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -901,6 +1125,10 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DW_G',
                 signalPos: { x: '210', y: '980' },
                 trainPos: { x: '225', y: '980' },
+                trainPosDistance: [
+                    { distanceToSignal: 600, x: 225, y: 980 },
+                    { distanceToSignal: 1000, x: 305, y: 980 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
