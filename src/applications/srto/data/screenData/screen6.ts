@@ -144,7 +144,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalType: 'station_standard',
             },
             {
-                signalName: 'SDn1_F',
+                signalName: 'SDN1_F',
                 signalPos: { x: '1940', y: '1260' },
                 trainPos: { x: '1925', y: '1260' },
                 signalDirectionOnMap: 'right',
