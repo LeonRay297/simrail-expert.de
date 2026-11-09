@@ -2420,6 +2420,13 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 ]
             },
             {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M25,1940 DOT5-5-10',
+                    'M25,1960 DOT5-5-10',
+                ]
+            },
+            {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // TOR 1S - T1
