@@ -9,6 +9,308 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "KMB_KATOWICEMUCHWIECSTASZIC": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M150,380 SWUP100 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR15 SPR10 LR80 DOT5-5-4',
+                    'M210,240 LR20 SPR10 LR80 DOT5-5-4',
+                    'M190,260 LR40 SPR10 LR80 DOT5-5-4',
+                    'M170,280 LR60 SPR10 LR80 DOT5-5-4',
+                    'M170,380 SWUP40 LR15 SWUP40 LR35 SPR10 LR80 DOT5-5-4',
+                    'M210,340 SWUP20 LR15 SPR10 LR80 DOT5-5-4',
+                    'M190,340 LR40 SPR10 LR80 DOT5-5-4',
+                    'M190,380 SWUP20 LR35 SPR10 LR80 DOT5-5-4',
+                    'M130,380 LR100 SPR10 LR80 DOT5-5-4',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'StA_A',
+                signalPos: { x: '130', y: '380' },
+                trainPos: { x: '115', y: '380' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_C',
+                signalPos: { x: '230', y: '220' },
+                trainPos: { x: '245', y: '220' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_D',
+                signalPos: { x: '230', y: '240' },
+                trainPos: { x: '245', y: '240' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_E',
+                signalPos: { x: '230', y: '260' },
+                trainPos: { x: '245', y: '260' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_F',
+                signalPos: { x: '230', y: '280' },
+                trainPos: { x: '245', y: '280' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_G',
+                signalPos: { x: '230', y: '300' },
+                trainPos: { x: '245', y: '300' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_H',
+                signalPos: { x: '230', y: '320' },
+                trainPos: { x: '245', y: '320' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_J',
+                signalPos: { x: '230', y: '340' },
+                trainPos: { x: '245', y: '340' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_K',
+                signalPos: { x: '230', y: '360' },
+                trainPos: { x: '245', y: '360' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'StA_L',
+                signalPos: { x: '230', y: '380' },
+                trainPos: { x: '245', y: '380' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Katowice Muchowiec Staszic',
+                    prefix: 'StA',
+                    pos: { x: 240, y: 170 },
+                    posFlipped: { x: 240, y: 420 }
+                },
+            },
+        ]
+    },
+    "KMB_KATOWICEMUCHKMB": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    'M830,420 LR30',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M830,400 LR80',
+                    'M830,440 LR20 SWUP20 LR55',
+                    'M870,400 CROSS',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'KMB_Y21',
+                signalPos: { x: '830', y: '400' },
+                trainPos: { x: '815', y: '400' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KMB_Y23',
+                signalPos: { x: '830', y: '420' },
+                trainPos: { x: '815', y: '420' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KMB_Y25',
+                signalPos: { x: '830', y: '440' },
+                trainPos: { x: '815', y: '440' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KMB_M',
+                signalPos: { x: '910', y: '400' },
+                trainPos: { x: '925', y: '400' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KMB_L',
+                signalPos: { x: '910', y: '420' },
+                trainPos: { x: '925', y: '420' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Katowice Much. KMB',
+                    prefix: 'KMB',
+                    pos: { x: 870, y: 360 },
+                    posFlipped: { x: 880, y: 470 }
+                },
+            },
+        ]
+    },
+    "Ssc_STASZIC": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    'M530,700 LR60',
+                    'M575,640 LR15 SWDN20',
+                    'M690,680 LR15 SWDN20',
+                    'M530,740 LR70 SWUP20 LR100 SPR10 LR15',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T2
+                    'M530,720 LR55 SWUP20 LR135 SWDN20 LR20',
+                    'M550,720 SWUP20 LR15 SWUP40 LR175',
+
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'Ssc_B',
+                signalPos: { x: '530', y: '720' },
+                trainPos: { x: '515', y: '720' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Ssc_E',
+                signalPos: { x: '715', y: '720' },
+                trainPos: { x: '700', y: '720' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Ssc_D',
+                signalPos: { x: '750', y: '660' },
+                trainPos: { x: '765', y: '660' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Ssc_C',
+                signalPos: { x: '750', y: '720' },
+                trainPos: { x: '765', y: '720' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Staszic',
+                    prefix: 'Ssc',
+                    pos: { x: 660, y: 620 },
+                    posFlipped: { x: 660, y: 770 }
+                },
+            },
+        ]
+    },
+
+    "KJw_KATOWICEJANOW": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T2
+                    'M770,1920 LR190',
+                    'M810,1920 SWUP20 LR15 SWDN20 LR15 SWDN20 LR45',
+                    // T4
+                    'M770,1960 LR30 LINE820,1980 LR100 LINE940,1960 LR20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // T1
+                    'M730,1900 LR230',
+                    // T3
+                    'M730,1920 LR20 LINE770,1940 LR40 LINE830,1960 LR80 LINE930,1940 LR30',
+
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'KJw_H',
+                signalPos: { x: '730', y: '1900' },
+                trainPos: { x: '715', y: '1900' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KJw_Z',
+                signalPos: { x: '730', y: '1920' },
+                trainPos: { x: '715', y: '1920' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KJw_A',
+                signalPos: { x: '960', y: '1900' },
+                trainPos: { x: '975', y: '1900' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'KJw_W',
+                signalPos: { x: '960', y: '1940' },
+                trainPos: { x: '975', y: '1940' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Katowice Janów',
+                    prefix: 'KJw',
+                    pos: { x: 850, y: 1860 },
+                    posFlipped: { x: 850, y: 2010 }
+                },
+            },
+        ]
+    },
+
     "SZABELNIA_MYSLOWICE_STAWISKA": {
         "TRACKS": [
             {
@@ -233,7 +535,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M1780,1600 LR20'
+                    'M1810,1600 LR20'
                 ]
             },
             {
@@ -651,8 +953,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    // T2 left SW
-                    'M930,720 LR20 SWDN20',
+                    // T2 left
+                    'M930,720 LR50',
                     // below T4 - 1
                     'M1000,760 LR90 SPR10 LR100 SPR10 LR65',
                     // below T4 - 2
@@ -673,7 +975,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     // T1
                     'M930,700 LR120 SPR10 LR200 SPR10 LR100',
                     // T2
-                    'M930,740 LR40 SWUP20 LR75 SPR10 LR200 SPR10 LR100',
+                    'M930,740 LR20 LINE970,720 LR80 SPR10 LR200 SPR10 LR100',
                     // SW T2 - T1 near peron on left
                     'M1030,720 SWUP20',
                     // SW T1 - T4 - SW T1 - SW T2
