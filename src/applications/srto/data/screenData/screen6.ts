@@ -9,6 +9,137 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "SMA_SOSNOWIECMACZKI": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // track 5 start & end
+                    'M800,1560 LR20',
+                    'M1000,1560 LR20',
+                    // below track 5
+                    'M930,1580 LR55 SWUP20',
+                    'M930,1600 LR35 SWUP20',
+                    'M930,1620 LR15 SWUP20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // SW track4 - track 5 - SW track3
+                    'M810,1540 SWDN20 LR35 SPR10 LR100 SPR10 LR35 SWUP20 LR15 SWUP20 LR15 SWUP20',
+                    // track 4
+                    'M750,1540 LR100 SPR10 LR100 SPR10 LR100',
+                    // track 3
+                    'M750,1520 LR100 SPR10 LR100 SPR10 LR100',
+                    // track 2
+                    'M830,1520 SWUP20 LR15 SPR10 LR100 SPR10 LR100',
+                    // track 1
+                    'M810,1520 SWUP40 LR35 SPR10 LR75 SWUP20 LR130',
+                    // cross
+                    'M770,1520 CROSS',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'SMA_B2',
+                signalPos: { x: '1070', y: '1520' },
+                trainPos: { x: '1085', y: '1520' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_B',
+                signalPos: { x: '1070', y: '1500' },
+                trainPos: { x: '1085', y: '1500' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_J',
+                signalPos: { x: '970', y: '1560' },
+                trainPos: { x: '955', y: '1560' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_H',
+                signalPos: { x: '970', y: '1540' },
+                trainPos: { x: '955', y: '1540' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_G',
+                signalPos: { x: '970', y: '1520' },
+                trainPos: { x: '955', y: '1520' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_F',
+                signalPos: { x: '970', y: '1500' },
+                trainPos: { x: '955', y: '1500' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_M',
+                signalPos: { x: '850', y: '1560' },
+                trainPos: { x: '865', y: '1560' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'SMA_N',
+                signalPos: { x: '850', y: '1540' },
+                trainPos: { x: '865', y: '1540' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'sma_R',
+                signalPos: { x: '850', y: '1520' },
+                trainPos: { x: '865', y: '1520' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'sma_O',
+                signalPos: { x: '850', y: '1500' },
+                trainPos: { x: '865', y: '1500' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'sma_P',
+                signalPos: { x: '850', y: '1480' },
+                trainPos: { x: '865', y: '1480' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'sma_V',
+                signalPos: { x: '750', y: '1540' },
+                trainPos: { x: '735', y: '1540' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Sosnowiec Maczki',
+                    prefix: 'SMA',
+                    pos: { x: 910, y: 1430 },
+                    posFlipped: { x: 910, y: 1640 }
+                },
+            },
+        ]
+    },
+
     "SDn_SOSNOWIECDANDOWKA": {
         "TRACKS": [
             {
