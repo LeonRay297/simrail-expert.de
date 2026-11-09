@@ -316,27 +316,27 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M1880,1620 LR100',
-                    'M1770,1640 LR210',
-                    'M1790,1700 LR95 SWUP40 LR90',
-
-                    'M1640,1800 LR277.5 LINE1920,1795 LU130 SPU50 LU50',
-                    'M1640,1820 LR297.5 LINE1940,1815 LU150 SPU50 LU50',
+                    'M1790,1570 LR115 LINE1907.5,1575 LD220 SPD30 LD90 LINE1910,1920 LR95',
+                    'M1680,1590 LR110 LR105 LINE1897.5,1595 LD200 SPD30 LD110 LINE1900,1940 LR105',
+                    'M1790,1700 LR95 LINE1887.5,1705 LD90 SPD30 LD130 LINE1890,1960 LR115',
+                    // TO SDn
+                    'M1640,1800 LR500',
+                    'M1640,1820 LR500',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: 'L138_266',
-                signalPos: { x: '1760', y: '1640' },
-                trainPos: { x: '1745', y: '1640' },
+                signalPos: { x: '1670', y: '1590' },
+                trainPos: { x: '1655', y: '1590' },
                 signalDirectionOnMap: 'right',
                 signalType: 'abs_last',
             },
             {
                 signalName: 'L138_266N',
-                signalPos: { x: '1760', y: '1640' },
-                trainPos: { x: '1775', y: '1640' },
+                signalPos: { x: '1670', y: '1590' },
+                trainPos: { x: '1685', y: '1590' },
                 signalDirectionOnMap: 'left',
                 signalType: 'abs_standard',
             },
@@ -345,7 +345,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 annotationType: 'trackLabels',
                 trackLabels: [
-                    { text: '266', pos: { x: 1875, y: 1640 } },
+                    { text: '266', pos: { x: 1855, y: 1590 } },
                 ]
             },
         ]
@@ -469,51 +469,51 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M2000,1660 LR20',
+                    'M2025,1960 LR20',
                 ]
             },
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M1990,1620 LR80 SPR10 LR80 DOT5-5-4',
-                    'M1990,1640 LR170 DOT5-5-4',
-                    'M1990,1660 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR20 SPR10 LR80 DOT5-5-4',
+                    'M2015,1920 LR80 SPR10 LR80 DOT5-5-4',
+                    'M2015,1940 LR170 DOT5-5-4',
+                    'M2015,1960 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR20 SPR10 LR80 DOT5-5-4',
                 ]
             }
         ],
         "SIGNALS": [
-{
+            {
                 signalName: 'MW_Z',
-                signalPos: { x: '1990', y: '1620' },
-                trainPos: { x: '1975', y: '1620' },
+                signalPos: { x: '2015', y: '1920' },
+                trainPos: { x: '2000', y: '1920' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'MW_W',
-                signalPos: { x: '1990', y: '1640' },
-                trainPos: { x: '1975', y: '1640' },
+                signalPos: { x: '2015', y: '1940' },
+                trainPos: { x: '2000', y: '1940' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'MW_U',
-                signalPos: { x: '1990', y: '1660' },
-                trainPos: { x: '1975', y: '1660' },
+                signalPos: { x: '2015', y: '1960' },
+                trainPos: { x: '2000', y: '1960' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'MW_A',
-                signalPos: { x: '2070', y: '1600' },
-                trainPos: { x: '2085', y: '1600' },
+                signalPos: { x: '2095', y: '1900' },
+                trainPos: { x: '2110', y: '1900' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'MW_B',
-                signalPos: { x: '2070', y: '1620' },
-                trainPos: { x: '2085', y: '1620' },
+                signalPos: { x: '2095', y: '1920' },
+                trainPos: { x: '2110', y: '1920' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -524,8 +524,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Mysłowice',
                     prefix: 'MW',
-                    pos: { x: 2090, y: 1570 },
-                    posFlipped: { x: 2090, y: 1690 }
+                    pos: { x: 2115, y: 1870 },
+                    posFlipped: { x: 2115, y: 1990 }
                 },
             },
         ]
@@ -535,43 +535,43 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M1810,1600 LR20'
+                    'M1720,1550 LR20'
                 ]
             },
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M1760,1600 LR55 SWDN20',
-                    'M1770,1620 LR100',
+                    'M1670,1550 LR55 SWDN20',
+                    'M1680,1570 LR100',
                 ]
             }
         ],
         "SIGNALS": [
             {
                 signalName: 'Szb_D',
-                signalPos: { x: '1760', y: '1600' },
-                trainPos: { x: '1745', y: '1600' },
+                signalPos: { x: '1670', y: '1550' },
+                trainPos: { x: '1655', y: '1550' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Szb_D1',
-                signalPos: { x: '1760', y: '1620' },
-                trainPos: { x: '1745', y: '1620' },
+                signalPos: { x: '1670', y: '1570' },
+                trainPos: { x: '1655', y: '1570' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Szb_C1',
-                signalPos: { x: '1760', y: '1620' },
-                trainPos: { x: '1775', y: '1620' },
+                signalPos: { x: '1670', y: '1570' },
+                trainPos: { x: '1685', y: '1570' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Szb_A',
-                signalPos: { x: '1870', y: '1620' },
-                trainPos: { x: '1885', y: '1620' },
+                signalPos: { x: '1780', y: '1570' },
+                trainPos: { x: '1795', y: '1570' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -582,8 +582,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Szabelnia',
                     prefix: 'Szb',
-                    pos: { x: 1815, y: 1570 },
-                    posFlipped: { x: 1815, y: 1670 }
+                    pos: { x: 1725, y: 1520 },
+                    posFlipped: { x: 1725, y: 1620 }
                 },
             },
         ]
