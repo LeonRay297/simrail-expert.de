@@ -27,20 +27,25 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 signalName: 'L138_266',
                 signalPos: { x: '1760', y: '1640' },
-                trainPos: { x: '1745', y: '1600' },
+                trainPos: { x: '1745', y: '1640' },
                 signalDirectionOnMap: 'right',
                 signalType: 'abs_last',
             },
             {
                 signalName: 'L138_266N',
                 signalPos: { x: '1760', y: '1640' },
-                trainPos: { x: '1745', y: '1620' },
+                trainPos: { x: '1775', y: '1640' },
                 signalDirectionOnMap: 'left',
                 signalType: 'abs_standard',
             },
         ],
         "ANNOTATIONS": [
-
+            {
+                annotationType: 'trackLabels',
+                trackLabels: [
+                    { text: '266', pos: { x: 1875, y: 1640 } },
+                ]
+            },
         ]
     },
     "Sk_STAWISKA": {
@@ -1313,12 +1318,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // TOR 1D - T1 - TOR 1S
-                    'M930,1200 LR120 SPR10 LR100 SPR10 LR60',
+                    'M880,1200 LR170 SPR10 LR100 SPR10 LR60',
                     // TOR 1M - T2
-                    'M930,1280 LR80 SPR10 LR100 SPR10 LR55 SWUP80',
+                    'M880,1280 LR130 SPR10 LR100 SPR10 LR55 SWUP80',
                     // T13
-                    'M950,1200 SWDN20 LR15 SPR10 LR50 UTLD40 LL50',
-                    'M950,1280 SWUP20 LR15',
+                    'M900,1200 SWDN20 LR15 SPR10 LR100 UTLD40 LL100',
+                    'M900,1280 SWUP20 LR15',
                     // T5
                     'M1020,1200 SWUP40 LR25 SPR10 LR100 SPR10 LR35 SWDN40',
                     // T6
@@ -1329,15 +1334,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
         "SIGNALS": [
             {
                 signalName: 'SKz_S',
-                signalPos: { x: '930', y: '1200' },
-                trainPos: { x: '915', y: '1200' },
+                signalPos: { x: '880', y: '1200' },
+                trainPos: { x: '865', y: '1200' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_T',
-                signalPos: { x: '930', y: '1280' },
-                trainPos: { x: '915', y: '1280' },
+                signalPos: { x: '880', y: '1280' },
+                trainPos: { x: '865', y: '1280' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -1364,15 +1369,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             },
             {
                 signalName: 'SKz_N',
-                signalPos: { x: '970', y: '1220' },
-                trainPos: { x: '985', y: '1220' },
+                signalPos: { x: '920', y: '1220' },
+                trainPos: { x: '935', y: '1220' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'SKz_M',
-                signalPos: { x: '970', y: '1260' },
-                trainPos: { x: '985', y: '1260' },
+                signalPos: { x: '920', y: '1260' },
+                trainPos: { x: '935', y: '1260' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -1453,8 +1458,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Sosnowiec Kazimierz',
                     prefix: 'SKz',
-                    pos: { x: 1080, y: 1100 },
-                    posFlipped: { x: 1080, y: 1390 }
+                    pos: { x: 1050, y: 1100 },
+                    posFlipped: { x: 1050, y: 1390 }
                 },
                 dispatchingPost: {
                     type: 'relay',
