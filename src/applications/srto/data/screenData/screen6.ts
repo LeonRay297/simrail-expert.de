@@ -9,6 +9,279 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
+    "SZABELNIA_MYSLOWICE_STAWISKA": {
+        "TRACKS": [
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M1880,1620 LR100',
+                    'M1770,1640 LR210',
+                    'M1790,1700 LR95 SWUP40 LR90',
+
+                    'M1640,1800 LR277.5 LINE1920,1795 LU130 SPU50 LU50',
+                    'M1640,1820 LR297.5 LINE1940,1815 LU150 SPU50 LU50',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'L138_266',
+                signalPos: { x: '1760', y: '1640' },
+                trainPos: { x: '1745', y: '1600' },
+                signalDirectionOnMap: 'right',
+                signalType: 'abs_last',
+            },
+            {
+                signalName: 'L138_266N',
+                signalPos: { x: '1760', y: '1640' },
+                trainPos: { x: '1745', y: '1620' },
+                signalDirectionOnMap: 'left',
+                signalType: 'abs_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+
+        ]
+    },
+    "Sk_STAWISKA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    // T2
+                    'M1510,1780 LR30',
+                    'M1760,1780 LR20',
+                    // T4
+                    'M1510,1820 LR70',
+                    'M1530,1820 SWUP20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    // to Myslowice
+                    'M1610,1720 SWUP20 LR15 SPR10 LR140',
+                    'M1590,1720 LR40 SPR10 LR100 UTLD40 LL100 SPL10 LL120',
+                    // T2
+                    'M1540,1780 LR90 SPR10 LR120 SWUP80',
+                    // T3
+                    'M1510,1800 LR120',
+                    // SW T3 - SW T1
+                    'M1590,1800 SWUP20 LR15 SWUP20',
+                    // SW T1 - T4
+                    'M1530,1760 SWDN20 LR15 SWDN20 LR15 SWDN20 LR55'
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'Sk1_A',
+                signalPos: { x: '1590', y: '1720' },
+                trainPos: { x: '1575', y: '1720' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_M',
+                signalPos: { x: '1510', y: '1760' },
+                trainPos: { x: '1495', y: '1760' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_E',
+                signalPos: { x: '1510', y: '1800' },
+                trainPos: { x: '1495', y: '1800' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk1_O',
+                signalPos: { x: '1630', y: '1700' },
+                trainPos: { x: '1645', y: '1700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk1_H',
+                signalPos: { x: '1630', y: '1720' },
+                trainPos: { x: '1645', y: '1720' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_L',
+                signalPos: { x: '1630', y: '1760' },
+                trainPos: { x: '1645', y: '1760' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_K',
+                signalPos: { x: '1630', y: '1780' },
+                trainPos: { x: '1645', y: '1780' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_D',
+                signalPos: { x: '1630', y: '1800' },
+                trainPos: { x: '1645', y: '1800' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk_X',
+                signalPos: { x: '1630', y: '1820' },
+                trainPos: { x: '1645', y: '1820' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Sk1_B',
+                signalPos: { x: '1780', y: '1700' },
+                trainPos: { x: '1795', y: '1700' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Stawiska',
+                    prefix: 'Sk',
+                    pos: { x: 1650, y: 1670 },
+                    posFlipped: { x: 1650, y: 1860 }
+                },
+            },
+        ]
+    },
+    "MW_MYSLOWICE": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    'M2000,1660 LR20',
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M1990,1620 LR80 SPR10 LR80 DOT5-5-4',
+                    'M1990,1640 LR170 DOT5-5-4',
+                    'M1990,1660 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR20 SPR10 LR80 DOT5-5-4',
+                ]
+            }
+        ],
+        "SIGNALS": [
+{
+                signalName: 'MW_Z',
+                signalPos: { x: '1990', y: '1620' },
+                trainPos: { x: '1975', y: '1620' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'MW_W',
+                signalPos: { x: '1990', y: '1640' },
+                trainPos: { x: '1975', y: '1640' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'MW_U',
+                signalPos: { x: '1990', y: '1660' },
+                trainPos: { x: '1975', y: '1660' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'MW_A',
+                signalPos: { x: '2070', y: '1600' },
+                trainPos: { x: '2085', y: '1600' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'MW_B',
+                signalPos: { x: '2070', y: '1620' },
+                trainPos: { x: '2085', y: '1620' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Mysłowice',
+                    prefix: 'MW',
+                    pos: { x: 2090, y: 1570 },
+                    posFlipped: { x: 2090, y: 1690 }
+                },
+            },
+        ]
+    },
+    "Szb_SZABELNIA": {
+        "TRACKS": [
+            {
+                color: NON_PLAYABLE_TRACKS_COLOR,
+                commands: [
+                    'M1780,1600 LR20'
+                ]
+            },
+            {
+                color: STATION_TRACK_COLOR,
+                commands: [
+                    'M1760,1600 LR55 SWDN20',
+                    'M1770,1620 LR100',
+                ]
+            }
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'Szb_D',
+                signalPos: { x: '1760', y: '1600' },
+                trainPos: { x: '1745', y: '1600' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Szb_D1',
+                signalPos: { x: '1760', y: '1620' },
+                trainPos: { x: '1745', y: '1620' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Szb_C1',
+                signalPos: { x: '1760', y: '1620' },
+                trainPos: { x: '1775', y: '1620' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Szb_A',
+                signalPos: { x: '1870', y: '1620' },
+                trainPos: { x: '1885', y: '1620' },
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": [
+            {
+                annotationType: 'station',
+                stationLabel: {
+                    name: 'Szabelnia',
+                    prefix: 'Szb',
+                    pos: { x: 1815, y: 1570 },
+                    posFlipped: { x: 1815, y: 1670 }
+                },
+            },
+        ]
+    },
+
     "SMA_SOSNOWIECMACZKI": {
         "TRACKS": [
             {
@@ -35,7 +308,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     // track 2
                     'M830,1520 SWUP20 LR15 SPR10 LR100 SPR10 LR100',
                     // track 1
-                    'M810,1520 SWUP40 LR35 SPR10 LR75 SWUP20 LR130',
+                    'M810,1520 SWUP40 LR35 SPR10 LR100 SWUP20 LR105',
                     // cross
                     'M770,1520 CROSS',
                 ]
@@ -1594,8 +1867,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Dąbrowa Górnicza Wschodnia',
                     prefix: 'DW',
-                    pos: { x: 340, y: 910 },
-                    posFlipped: { x: 340, y: 1200 }
+                    pos: { x: 335, y: 910 },
+                    posFlipped: { x: 335, y: 1200 }
                 },
                 dispatchingPost: {
                     type: 'relay',
