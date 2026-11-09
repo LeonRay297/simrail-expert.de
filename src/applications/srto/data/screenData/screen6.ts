@@ -9,7 +9,7 @@ const OUT_OF_STATION_TRACK_COLOR = 'rgb(120, 120, 120)'
 const NON_PLAYABLE_TRACKS_COLOR = 'rgb(60, 60, 60)'
 
 export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
-    "KMB_KATOWICEMUCHWIECSTASZIC": {
+    "StA_KATOWICEMUCHWIECSTASZIC": {
         "TRACKS": [
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
@@ -19,15 +19,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M150,380 SWUP100 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR15 SPR10 LR80 DOT5-5-4',
-                    'M210,240 LR20 SPR10 LR80 DOT5-5-4',
-                    'M190,260 LR40 SPR10 LR80 DOT5-5-4',
-                    'M170,280 LR60 SPR10 LR80 DOT5-5-4',
-                    'M170,380 SWUP40 LR15 SWUP40 LR35 SPR10 LR80 DOT5-5-4',
-                    'M210,340 SWUP20 LR15 SPR10 LR80 DOT5-5-4',
-                    'M190,340 LR40 SPR10 LR80 DOT5-5-4',
-                    'M190,380 SWUP20 LR35 SPR10 LR80 DOT5-5-4',
-                    'M130,380 LR100 SPR10 LR80 DOT5-5-4',
+                    'M150,380 SWUP100 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR15 SPR10 DOT5-5-10',
+                    'M210,240 LR20 SPR10 DOT5-5-10',
+                    'M190,260 LR40 SPR10 DOT5-5-10',
+                    'M170,280 LR60 SPR10 DOT5-5-10',
+                    'M170,380 SWUP40 LR15 SWUP40 LR35 SPR10 DOT5-5-10',
+                    'M210,340 SWUP20 LR15 SPR10 DOT5-5-10',
+                    'M190,340 LR40 SPR10 DOT5-5-10',
+                    'M190,380 SWUP20 LR35 SPR10 DOT5-5-10',
+                    'M130,380 LR100 SPR10 DOT5-5-10',
                 ]
             }
         ],
@@ -109,8 +109,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Katowice Muchowiec Staszic',
                     prefix: 'StA',
-                    pos: { x: 240, y: 170 },
-                    posFlipped: { x: 240, y: 420 }
+                    pos: { x: 230, y: 170 },
+                    posFlipped: { x: 230, y: 420 }
                 },
             },
         ]
@@ -120,7 +120,13 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M830,420 LR30',
+                    'M725,420 DOT5-5-10 SPR10 LR30',
+                ]
+            },
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M725,400 DOT5-5-10',
                 ]
             },
             {
@@ -176,7 +182,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     name: 'Katowice Much. KMB',
                     prefix: 'KMB',
                     pos: { x: 870, y: 360 },
-                    posFlipped: { x: 880, y: 470 }
+                    posFlipped: { x: 870, y: 470 }
                 },
             },
         ]
@@ -186,18 +192,25 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M530,700 LR60',
-                    'M575,640 LR15 SWDN20',
-                    'M690,680 LR15 SWDN20',
-                    'M530,740 LR70 SWUP20 LR100 SPR10 LR15',
+                    'M530,600 LR60',
+                    'M575,540 LR15 SWDN20',
+                    'M690,580 LR15 SWDN20',
+                    'M530,640 LR70 SWUP20 LR100 SPR10 LR15',
+                    'M430,640 DOT5-5-10',
+                ]
+            },
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M760,620 DOT5-5-10 ',
                 ]
             },
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // T2
-                    'M530,720 LR55 SWUP20 LR135 SWDN20 LR20',
-                    'M550,720 SWUP20 LR15 SWUP40 LR175',
+                    'M530,620 LR55 SWUP20 LR135 SWDN20 LR20',
+                    'M550,620 SWUP20 LR15 SWUP40 LR175',
 
                 ]
             }
@@ -205,29 +218,29 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
         "SIGNALS": [
             {
                 signalName: 'Ssc_B',
-                signalPos: { x: '530', y: '720' },
-                trainPos: { x: '515', y: '720' },
+                signalPos: { x: '530', y: '620' },
+                trainPos: { x: '515', y: '620' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ssc_E',
-                signalPos: { x: '715', y: '720' },
-                trainPos: { x: '700', y: '720' },
+                signalPos: { x: '715', y: '620' },
+                trainPos: { x: '700', y: '620' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ssc_D',
-                signalPos: { x: '750', y: '660' },
-                trainPos: { x: '765', y: '660' },
+                signalPos: { x: '750', y: '560' },
+                trainPos: { x: '765', y: '560' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Ssc_C',
-                signalPos: { x: '750', y: '720' },
-                trainPos: { x: '765', y: '720' },
+                signalPos: { x: '750', y: '620' },
+                trainPos: { x: '765', y: '620' },
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -238,8 +251,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Staszic',
                     prefix: 'Ssc',
-                    pos: { x: 660, y: 620 },
-                    posFlipped: { x: 660, y: 770 }
+                    pos: { x: 660, y: 520 },
+                    posFlipped: { x: 660, y: 670 }
                 },
             },
         ]
@@ -364,6 +377,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 ]
             },
             {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M1485,1720 DOT5-5-10',
+                ]
+            },
+            {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // to Myslowice
@@ -475,9 +494,9 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M2015,1920 LR80 SPR10 LR80 DOT5-5-4',
-                    'M2015,1940 LR170 DOT5-5-4',
-                    'M2015,1960 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR20 SPR10 LR80 DOT5-5-4',
+                    'M2015,1920 LR80 SPR10 DOT5-5-10',
+                    'M2015,1940 LR80 DOT5-5-11',
+                    'M2015,1960 LR15 SWUP20 LR15 SWUP20 LR15 SWUP20 LR20 SPR10 DOT5-5-10',
                 ]
             }
         ],
@@ -536,6 +555,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     'M1720,1550 LR20'
+                ]
+            },
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M1565,1550 DOT5-5-10',
                 ]
             },
             {
@@ -601,6 +626,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     'M930,1580 LR55 SWUP20',
                     'M930,1600 LR35 SWUP20',
                     'M930,1620 LR15 SWUP20',
+                ]
+            },
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M650,1520 DOT5-5-10',
+                    'M645,1540 DOT5-5-10',
+                    'M1075,1540 DOT5-5-10',
+
                 ]
             },
             {
@@ -954,7 +988,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // T2 left
-                    'M930,720 LR50',
+                    'M830,720 DOT5-5-11 LR40',
                     // below T4 - 1
                     'M1000,760 LR90 SPR10 LR100 SPR10 LR65',
                     // below T4 - 2
@@ -1387,11 +1421,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
-                    'M1680,200 LR80 SPR10 LR230 SPR10 LR80',
-                    'M1680,220 LR80 SPR10 LR230 SPR10 LR80',
+                    'M1580,200 DOT5-5-10 SPR5 LR80 SPR10 LR230 SPR10 LR80',
+                    'M1575,220 DOT5-5-10 SPR10 LR80 SPR10 LR230 SPR10 LR80',
                     // To KOZIOL
                     'M1720,200 SWDN20 LR15 SWDN20',
-                    'M1680,240 LR80',
+                    'M1580,240 DOT5-5-10 SPR5 LR80',
                     'M1700,200 SWUP20 LR55',
                     'M2010,240 LR15 SWUP20 LR15 SWUP20 LR15 SWDN20'
                 ]
@@ -1488,7 +1522,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // T4
-                    'M1030,160 LR360',
+                    'M930,160 DOT5-5-11 LR350 DOT5-5-11',
                     // T3
                     'M1070,200 SWUP20 LR35 SPR10 LR100 SPR10 LR15 SWDN20',
                     // Bottom tracks
@@ -1861,7 +1895,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // TOR 1J - TB
-                    'M150,680 LR70',
+                    'M45,680 DOT5-5-10 SPR10 LR50',
                     // SW28
                     'M290,640 LR15 SWDN40',
                     // SW9/10 SW15/16
@@ -2378,7 +2412,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                     // TOR 2B - T6
                     'M170,1960 LR120 SPR10 LR100 SPR10 LR20',
                     // T201
-                    'M130,1800 LR120 SWUP20 LR35 SPR10 LR140 SPR10 LR75 SWDN40 LR60',
+                    'M25,1800 DOT5-5-10 SPR10 LR120 SWUP20 LR35 SPR10 LR140 SPR10 LR75 SWDN40 LR60 SPR10 DOT5-5-10',
                     // T203
                     'M270,1780 SWUP20 LR15 SPR10 LR140 SPR10 LR15 SWDN20',
                     // T100 SW106ab/cd
