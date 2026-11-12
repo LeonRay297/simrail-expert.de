@@ -181,6 +181,44 @@ export const NextSignalGroups: NextSignalGroup[] = [
 
 	{ lastSignals: ['Tl_G', 'Tl_H', 'Tl_J'], nextSignal: 'Ch_A' },
 	{ lastSignals: ['Ch_B', 'Ch_K', 'Ch_C', 'Ch_D'], nextSignal: 'Tl_N' },
+
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+	//~ S6 | KM Staszic - Bukowno ~\\
+	//~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~\\
+	//
+	// Katowice Much. KMB <-> Katowice Janów
+	{ lastSignals: ['KJw_A'], nextSignal: 'KMB_M' },
+	{ lastSignals: ['KJw_W'], nextSignal: 'KMB_L' },
+	{ lastSignals: ['KMB_Y21', 'KMB_Y23', 'KMB_Y25', ], nextSignal: 'KJw_Z' },
+
+	//
+	// Stawiska <-> Sosnowiec Dańdówka
+	{ lastSignals: ['SDn_N', 'SDn_P', 'SDn_R', 'SDn_T', 'SDn_U'], nextSignal: 'Sk_D' },
+
+	//
+	// D.G. Towarowa <-> Przemiarki
+	{ lastSignals: ['Pmi_B', 'Pmi_A'], nextSignal: 'DTA_B' },
+	{ lastSignals: ['DTA_C1', 'DTA_C2', 'DTA_D'], nextSignal: 'Pmi_D' },
+
+	//
+	// Sławków <-> Bukowno
+	// TODO to Sławków ~6km, to Borowa Górka ~9km. The current method cannot determine the direction.
+	{ lastSignals: ['Bo_F1', 'Bo_F2', 'Bo_F4', 'Bo_F7', 'Bo_F8', 'Bo_F9'], nextSignal: 'Sl_C' },
+	{ lastSignals: ['Sl_E3', 'Sl_E1', 'Sl_E2', 'Sl_E4', 'Sl_E6'], nextSignal: 'Bo_L' },
+
+	//
+	// Borowa Górka <-> Bukowno
+	{ lastSignals: ['285_BG_C'], nextSignal: 'Bo_P' },
+
+	//
+	// Bukowno <-> Olkusz
+	{ lastSignals: ['Bo_D9', 'Bo_D7', 'Bo_D1', 'Bo_D2', 'Bo_D4', 'Bo_D8'], nextSignal: 'O1_H' },
+	{ lastSignals: ['O1_F', 'O1_E'], nextSignal: 'Bo_B' },
+
+	//
+	// Olkusz <-> Tunel
+	{ lastSignals: ['O_B', 'O_C', 'O_D'], nextSignal: 'JO_H' },
+
 ]
 
 export const NextPredictiveSignal: Record<string, string> = Object.fromEntries(

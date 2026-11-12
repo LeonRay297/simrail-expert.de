@@ -1,7 +1,7 @@
 import { ScreenData } from "../../types/mapdata-types";
 
 /* ========================================================================================================
-    SCREEN 6 = KM STASZIC - STAWISKA - DANDOWKA - JULIUSZ - DABROWA GORNICZA WSCHODNIA - SLAWKOW - BUKONOW
+    SCREEN 6 = KM STASZIC - STAWISKA - DANDOWKA - JULIUSZ - DABROWA GORNICZA WSCHODNIA - SLAWKOW - BUKOWNO
    ======================================================================================================== */
 
 const STATION_TRACK_COLOR = 'rgb(255, 255, 255)';
@@ -57,7 +57,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             // },
             {
                 annotationType: 'differentScreenMarker',
-                nodePos: { x: 10, y: 655 },
+                nodePos: { x: 10, y: 650 },
                 text: 'LK142 - Katowice Ligota'
             },
             {
@@ -210,27 +210,44 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~1.5km
             {
                 signalName: 'KMB_Y25',
                 signalPos: { x: '175', y: '300' },
                 trainPos: { x: '160', y: '300' },
+                trainPosDistance: [
+                    { distanceToSignal: 1000, x: 65, y: 610, switchDirection: true },
+                    { distanceToSignal: 500, x: 160, y: 300 ,},
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'KMB_M',
                 signalPos: { x: '255', y: '260' },
                 trainPos: { x: '270', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4800, x: 615, y: 260 },
+                    { distanceToSignal: 3600, x: 485, y: 260 },
+                    { distanceToSignal: 2400, x: 412, y: 260 },
+                    { distanceToSignal: 1200, x: 340, y: 260 },
+                    { distanceToSignal: 500, x: 270, y: 260 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'KMB_L',
                 signalPos: { x: '255', y: '280' },
                 trainPos: { x: '270', y: '280' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4800, x: 615, y: 300 },
+                    { distanceToSignal: 3600, x: 485, y: 280 },
+                    { distanceToSignal: 2400, x: 412, y: 280 },
+                    { distanceToSignal: 1200, x: 340, y: 280 },
+                    { distanceToSignal: 500, x: 270, y: 280 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -276,11 +293,14 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO 1.5km
             {
                 signalName: 'Ssc_B',
                 signalPos: { x: '170', y: '610' },
                 trainPos: { x: '155', y: '610' },
+                trainPosDistance: [
+                    { distanceToSignal: 1000, x: 70, y: 300 ,switchDirection: true },
+                    { distanceToSignal: 500, x: 155, y: 610 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -429,8 +449,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M265,260 LR235',
-                    'M265,280 LR235',
+                    'M265,260 LR315',
+                    'M265,280 LR315',
                 ]
             }
         ],
@@ -443,53 +463,73 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
                     // T2
-                    'M550,280 LR190',
-                    'M590,280 SWUP20 LR15 SWDN20 LR15 SWDN20 LR45',
+                    'M630,280 LR190',
+                    'M670,280 SWUP20 LR15 SWDN20 LR15 SWDN20 LR45',
                     // T4
-                    'M550,320 LR40 SWDN20 LR120 SWUP20 LR20',
+                    'M630,320 LR40 SWDN20 LR120 SWUP20 LR20',
                 ]
             },
             {
                 color: STATION_TRACK_COLOR,
                 commands: [
                     // T1
-                    'M510,260 LR230',
+                    'M590,260 LR230',
                     // T3
-                    'M510,280 LR20 SWDN20 LR75 SWDN20 LR15 LR50 LR15 SWUP20 LR40',
+                    'M590,280 LR20 SWDN20 LR75 SWDN20 LR15 LR50 LR15 SWUP20 LR40',
 
                 ]
             }
         ],
         "SIGNALS": [
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'KJw_H',
-                signalPos: { x: '510', y: '260' },
-                trainPos: { x: '495', y: '260' },
+                signalPos: { x: '590', y: '260' },
+                trainPos: { x: '575', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4500, x: 358, y: 260 },
+                    { distanceToSignal: 3000, x: 430, y: 260 },
+                    { distanceToSignal: 1500, x: 503, y: 260 },
+                    { distanceToSignal: 500, x: 575, y: 260 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'KJw_Z',
-                signalPos: { x: '510', y: '280' },
-                trainPos: { x: '495', y: '280' },
+                signalPos: { x: '590', y: '280' },
+                trainPos: { x: '575', y: '280' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4500, x: 358, y: 280 },
+                    { distanceToSignal: 3000, x: 430, y: 280 },
+                    { distanceToSignal: 1500, x: 503, y: 280 },
+                    { distanceToSignal: 500, x: 575, y: 280 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.1km
             {
                 signalName: 'KJw_A',
-                signalPos: { x: '740', y: '260' },
-                trainPos: { x: '755', y: '260' },
+                signalPos: { x: '820', y: '260' },
+                trainPos: { x: '835', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2100 m
+                    { distanceToSignal: 1100, x: 875, y: 260 },
+                    { distanceToSignal: 500, x: 835, y: 260 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~2.1km
             {
                 signalName: 'KJw_W',
-                signalPos: { x: '740', y: '300' },
-                trainPos: { x: '755', y: '300' },
+                signalPos: { x: '820', y: '300' },
+                trainPos: { x: '835', y: '300' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2100 m
+                    { distanceToSignal: 1100, x: 875, y: 300 },
+                    { distanceToSignal: 500, x: 835, y: 300 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -500,8 +540,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 stationLabel: {
                     name: 'Katowice Janów',
                     prefix: 'KJw',
-                    pos: { x: 630, y: 220 },
-                    posFlipped: { x: 630, y: 370 }
+                    pos: { x: 710, y: 220 },
+                    posFlipped: { x: 710, y: 370 }
                 },
             },
         ]
@@ -511,15 +551,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 color: NON_PLAYABLE_TRACKS_COLOR,
                 commands: [
-                    'M740,280 LR240',
-                    'M740,320 LR240',
+                    'M820,280 LR160',
+                    'M820,320 LR160',
                 ]
             },
             {
                 color: OUT_OF_STATION_TRACK_COLOR,
                 commands: [
-                    'M750,260 LR220',
-                    'M750,300 LR220',
+                    'M830,260 LR140',
+                    'M830,300 LR140',
                 ]
             }
         ],
@@ -613,6 +653,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'Sk_M',
                 signalPos: { x: '980', y: '260' },
                 trainPos: { x: '965', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2100 m
+                    { distanceToSignal: 1600, x: 690, y: 260 },
+                    { distanceToSignal: 1000, x: 925, y: 260 },
+                    { distanceToSignal: 500, x: 965, y: 260 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -620,6 +666,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'Sk_E',
                 signalPos: { x: '980', y: '300' },
                 trainPos: { x: '965', y: '300' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2100 m
+                    { distanceToSignal: 1600, x: 690, y: 300 },
+                    { distanceToSignal: 1000, x: 925, y: 300 },
+                    { distanceToSignal: 500, x: 965, y: 300 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -651,19 +703,31 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'Sk_D',
                 signalPos: { x: '1100', y: '300' },
                 trainPos: { x: '1115', y: '300' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4500, x: 1895, y: 300 },
+                    { distanceToSignal: 3000, x: 1650, y: 300 },
+                    { distanceToSignal: 1500, x: 1400, y: 300 },
+                    { distanceToSignal: 500, x: 1115, y: 300 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~4.9km
             {
                 signalName: 'Sk_X',
                 signalPos: { x: '1100', y: '320' },
                 trainPos: { x: '1115', y: '320' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~4900 m
+                    { distanceToSignal: 4500, x: 1895, y: 320 },
+                    { distanceToSignal: 3000, x: 1650, y: 320 },
+                    { distanceToSignal: 1500, x: 1400, y: 320 },
+                    { distanceToSignal: 500, x: 1115, y: 320 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -849,8 +913,8 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             {
                 signalName: 'SG_S',
                 invisibleSignal: true,
-                signalPos: { x: '1515', y: '140' },
-                trainPos: { x: '1500', y: '140' },
+                signalPos: { x: '1515', y: '120' },
+                trainPos: { x: '1500', y: '120' },
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard'
             },
@@ -932,11 +996,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard'
             },
-            // TODO ~2.6km
             {
                 signalName: 'SPł1_A',
                 signalPos: { x: '1775', y: '220' },
                 trainPos: { x: '1790', y: '220' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 1600, x: 1895, y: 260 },
+                    { distanceToSignal: 500, x: 1790, y: 220 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard'
             },
@@ -980,6 +1048,22 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             },
         ],
         "SIGNALS": [
+            {
+                signalName: 'KZw_A',
+                invisibleSignal: true,
+                signalPos: { x: '900', y: '70' },
+                trainPos: { x: '915', y: '70' },
+                signalType: 'abs_last',
+                signalDirectionOnMap: 'left',
+            },
+            {
+                signalName: 'KZ_J',
+                invisibleSignal: true,
+                signalPos: { x: '900', y: '90' },
+                trainPos: { x: '915', y: '90' },
+                signalType: 'abs_last',
+                signalDirectionOnMap: 'left',
+            },
             {
                 signalName: 'L138_279N',
                 signalPos: { x: '1020', y: '70' },
@@ -1071,27 +1155,43 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~2.6km
             {
                 signalName: 'SDn_W',
                 signalPos: { x: '2000', y: '260' },
                 trainPos: { x: '1985', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 1600, x: 1880, y: 220 },
+                    { distanceToSignal: 500, x: 1985, y: 260 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~5.1km
             {
                 signalName: 'SDn_Sz1N', //? SDn_X
                 signalPos: { x: '2000', y: '300' },
                 trainPos: { x: '1985', y: '300' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4500, x: 1205, y: 300 },
+                    { distanceToSignal: 3000, x: 1490, y: 300 },
+                    { distanceToSignal: 1500, x: 1740, y: 300 },
+                    { distanceToSignal: 500, x: 1985, y: 300 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~4.9km
             {
                 signalName: 'SDn_Z',
                 signalPos: { x: '2000', y: '320' },
                 trainPos: { x: '1985', y: '320' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5100 m
+                    { distanceToSignal: 4500, x: 1205, y: 320 },
+                    { distanceToSignal: 3000, x: 1490, y: 320 },
+                    { distanceToSignal: 1500, x: 1740, y: 320 },
+                    { distanceToSignal: 500, x: 1985, y: 320 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -1207,27 +1307,41 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~4km peron 2km
             {
                 signalName: 'SDn_A',
                 signalPos: { x: '2450', y: '260' },
                 trainPos: { x: '2465', y: '260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3500 m
+                    { distanceToSignal: 2800, x: 435, y: 690 },
+                    { distanceToSignal: 2000, x: 225, y: 690 },
+                    { distanceToSignal: 1200, x: 35, y: 690 },
+                    { distanceToSignal: 500, x: 2465, y: 260 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~3.4km
             {
                 signalName: 'SDn_B',
                 signalPos: { x: '2450', y: '300' },
                 trainPos: { x: '2465', y: '300' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3400 m
+                    { distanceToSignal: 2000, x: 55, y: 830 },
+                    { distanceToSignal: 500, x: 2465, y: 300 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~3.4km
             {
                 signalName: 'SDn_C',
                 signalPos: { x: '2450', y: '320' },
                 trainPos: { x: '2465', y: '320' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3400 m
+                    { distanceToSignal: 2000, x: 55, y: 850 },
+                    { distanceToSignal: 500, x: 2465, y: 320 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -1276,10 +1390,10 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 annotationType: 'poStop',
                 poPlatforms: {
                     poName: 'Sosnowiec Porąbka',
-                    pos: { x: 405, y: 660 },
-                    posFlipped: { x: 405, y: 710 },
+                    pos: { x: 255, y: 660 },
+                    posFlipped: { x: 255, y: 710 },
                     platforms: [
-                        { pos: { x: 380, y: 675 }, width: 50, height: 10 }
+                        { pos: { x: 230, y: 675 }, width: 50, height: 10 }
                     ]
                 }
             },
@@ -1324,19 +1438,31 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~4.2km
             {
                 signalName: 'Ju_A',
                 signalPos: { x: '300', y: '830' },
                 trainPos: { x: '315', y: '830' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~4200 m
+                    { distanceToSignal: 3000, x: 895, y: 930 },
+                    { distanceToSignal: 2000, x: 640, y: 930 },
+                    { distanceToSignal: 1000, x: 490, y: 830 },
+                    { distanceToSignal: 500, x: 315, y: 830 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~4.5km
             {
                 signalName: 'Ju_B',
                 signalPos: { x: '300', y: '850' },
                 trainPos: { x: '315', y: '850' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~4500 m
+                    { distanceToSignal: 3000, x: 895, y: 1010 },
+                    { distanceToSignal: 2000, x: 640, y: 1010 },
+                    { distanceToSignal: 1000, x: 490, y: 850 },
+                    { distanceToSignal: 500, x: 315, y: 850 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -1413,19 +1539,29 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~2.2km
             {
                 signalName: 'SMA_B2',
                 signalPos: { x: '440', y: '990' },
                 trainPos: { x: '455', y: '990' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2200 m
+                    { distanceToSignal: 1600, x: 915, y: 990 },
+                    { distanceToSignal: 1000, x: 640, y: 990 },
+                    { distanceToSignal: 500, x: 455, y: 990 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~2.2km
             {
                 signalName: 'SMA_B',
                 signalPos: { x: '440', y: '970' },
                 trainPos: { x: '455', y: '970' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2200 m
+                    { distanceToSignal: 1600, x: 915, y: 970 },
+                    { distanceToSignal: 1000, x: 640, y: 970 },
+                    { distanceToSignal: 500, x: 455, y: 970 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -1575,11 +1711,16 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~4km peron 500m
             {
                 signalName: 'SKz_S',
                 signalPos: { x: '540', y: '690' },
                 trainPos: { x: '525', y: '690' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3500 m
+                    { distanceToSignal: 2000, x: 125, y: 690 },
+                    { distanceToSignal: 500, x: 285, y: 690 },
+                    { distanceToSignal: 300, x: 525, y: 690 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -1770,11 +1911,17 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
     "SIGNALS": [
-            // TODO ~4.2km
             {
                 signalName: 'Dra_A',
                 signalPos: { x: '1000', y: '930' },
                 trainPos: { x: '985', y: '930' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~4200 m
+                    { distanceToSignal: 3000, x: 405, y: 830 },
+                    { distanceToSignal: 2000, x: 580, y: 830 },
+                    { distanceToSignal: 1000, x: 730, y: 930 },
+                    { distanceToSignal: 500, x: 985, y: 930 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -1785,59 +1932,95 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.2km
             {
                 signalName: 'Dra_C',
                 signalPos: { x: '1020', y: '970' },
                 trainPos: { x: '1005', y: '970' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2200 m
+                    { distanceToSignal: 1600, x: 545, y: 970 },
+                    { distanceToSignal: 1000, x: 730, y: 970 },
+                    { distanceToSignal: 500, x: 1005, y: 970 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.2km
             {
                 signalName: 'Dra_D',
                 signalPos: { x: '1020', y: '990' },
                 trainPos: { x: '1005', y: '990' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2200 m
+                    { distanceToSignal: 1600, x: 545, y: 990 },
+                    { distanceToSignal: 1000, x: 730, y: 990 },
+                    { distanceToSignal: 500, x: 1005, y: 990 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~4.5km
             {
                 signalName: 'Dra_E',
                 signalPos: { x: '1000', y: '1010' },
                 trainPos: { x: '985', y: '1010' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~4500 m
+                    { distanceToSignal: 3000, x: 405, y: 850 },
+                    { distanceToSignal: 2000, x: 580, y: 850 },
+                    { distanceToSignal: 1000, x: 730, y: 1010 },
+                    { distanceToSignal: 500, x: 985, y: 1010 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.6km
             {
                 signalName: 'Dra_M',
                 signalPos: { x: '1180', y: '950' },
                 trainPos: { x: '1195', y: '950' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 2000, x: 1615, y: 990 },
+                    { distanceToSignal: 1000, x: 1420, y: 950 },
+                    { distanceToSignal: 500, x: 1195, y: 950 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~2km
             {
                 signalName: 'Dra_L',
                 signalPos: { x: '1180', y: '970' },
                 trainPos: { x: '1195', y: '970' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1600, x: 1685, y: 690 },
+                    { distanceToSignal: 800, x: 1420, y: 970 },
+                    { distanceToSignal: 500, x: 1195, y: 970 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~2km
             {
                 signalName: 'Dra_K',
                 signalPos: { x: '1180', y: '990' },
                 trainPos: { x: '1195', y: '990' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1600, x: 1685, y: 730 },
+                    { distanceToSignal: 800, x: 1420, y: 990 },
+                    { distanceToSignal: 500, x: 1195, y: 990 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~2.6km
             {
                 signalName: 'Dra_J',
                 signalPos: { x: '1180', y: '1010' },
                 trainPos: { x: '1195', y: '1010' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 2000, x: 1615, y: 1010 },
+                    { distanceToSignal: 1000, x: 1420, y: 1010 },
+                    { distanceToSignal: 500, x: 1195, y: 1010 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -1923,11 +2106,18 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~2.5km
             {
                 signalName: 'DS_Z',
                 signalPos: { x: '1025', y: '650' },
                 trainPos: { x: '1010', y: '650' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2500 m
+                    { distanceToSignal: 2200, x: 2265, y: 690, switchDirection: true },
+                    { distanceToSignal: 1600, x: 2000, y: 550, switchDirection: true },
+                    { distanceToSignal: 1200, x: 1500, y: 550, switchDirection: true },
+                    { distanceToSignal: 800, x: 980, y: 550, switchDirection: true },
+                    { distanceToSignal: 500, x: 1010, y: 650 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2060,19 +2250,27 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~1.5km
             {
                 signalName: 'DS_A',
                 signalPos: { x: '1465', y: '650' },
                 trainPos: { x: '1480', y: '650' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~1500 m
+                    { distanceToSignal: 1000, x: 1615, y: 930 },
+                    { distanceToSignal: 500, x: 1480, y: 650 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~1.5km
             {
                 signalName: 'DS_B',
                 signalPos: { x: '1465', y: '670' },
                 trainPos: { x: '1480', y: '670' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~1500 m
+                    { distanceToSignal: 1000, x: 1615, y: 950 },
+                    { distanceToSignal: 500, x: 1480, y: 670 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2137,19 +2335,29 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~2km
             {
                 signalName: 'DP1_M',
                 signalPos: { x: '1790', y: '690' },
                 trainPos: { x: '1775', y: '690' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1600, x: 1285, y: 970 },
+                    { distanceToSignal: 800, x: 1510, y: 970 },
+                    { distanceToSignal: 500, x: 1775, y: 690 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2km
             {
                 signalName: 'DP1_K',
                 signalPos: { x: '1790', y: '730' },
                 trainPos: { x: '1775', y: '730' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1600, x: 1285, y: 990 },
+                    { distanceToSignal: 800, x: 1510, y: 990 },
+                    { distanceToSignal: 500, x: 1775, y: 730 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2158,7 +2366,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1910', y: '690' },
                 trainPos: { x: '1925', y: '690' },
                 trainPosDistance: [
-                    { distanceToSignal: 750, x: 2110, y: 690 },
+                    { distanceToSignal: 750, x: 2120, y: 690 },
                     { distanceToSignal: 300, x: 1925, y: 690 },
                 ],
                 signalDirectionOnMap: 'left',
@@ -2169,7 +2377,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalPos: { x: '1910', y: '710' },
                 trainPos: { x: '1925', y: '710' },
                 trainPosDistance: [
-                    { distanceToSignal: 750, x: 2110, y: 730 },
+                    { distanceToSignal: 750, x: 2120, y: 730 },
                     { distanceToSignal: 300, x: 1925, y: 730 },
                 ],
                 signalDirectionOnMap: 'left',
@@ -2216,7 +2424,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~3.5km
+            // DISTANCE TO MAIN SIGNAL: ~3500 m
             {
                 signalName: 'DP_A',
                 signalPos: { x: '2250', y: '710' },
@@ -2224,7 +2432,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~3.5km
+            // DISTANCE TO MAIN SIGNAL: ~3500 m
             {
                 signalName: 'DP_L',
                 signalPos: { x: '2250', y: '730' },
@@ -2291,27 +2499,42 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~2.5km
             {
                 signalName: 'DGHK_N',
                 signalPos: { x: '2370', y: '690' },
                 trainPos: { x: '2355', y: '690' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2500 m
+                    { distanceToSignal: 2200, x: 920, y: 650, switchDirection: true },
+                    { distanceToSignal: 1600, x: 1070, y: 550},
+                    { distanceToSignal: 1200, x: 1590, y: 550 },
+                    { distanceToSignal: 800, x: 2090, y: 550 },
+                    { distanceToSignal: 500, x: 2355, y: 690 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~3.5km peron 3km
             {
                 signalName: 'DGHK_M',
                 signalPos: { x: '2370', y: '710' },
                 trainPos: { x: '2355', y: '710' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3500 m, peron 3000 m
+                    { distanceToSignal: 3000, x: 2200, y: 690 },
+                    { distanceToSignal: 500, x: 2355, y: 710 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~3.5km peron 3km
             {
                 signalName: 'DGHK_L',
                 signalPos: { x: '2370', y: '730' },
                 trainPos: { x: '2355', y: '730' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3500 m, peron 3000 m
+                    { distanceToSignal: 3000, x: 2200, y: 730 },
+                    { distanceToSignal: 500, x: 2355, y: 730 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2449,35 +2672,53 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~1.5km
             {
                 signalName: 'DW_A',
                 signalPos: { x: '1720', y: '930' },
                 trainPos: { x: '1705', y: '930' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~1500 m
+                    { distanceToSignal: 1000, x: 1570, y: 650 },
+                    { distanceToSignal: 500, x: 1705, y: 930 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~1.5km
             {
                 signalName: 'DW_B',
                 signalPos: { x: '1720', y: '950' },
                 trainPos: { x: '1705', y: '950' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~1500 m
+                    { distanceToSignal: 1000, x: 1570, y: 670 },
+                    { distanceToSignal: 500, x: 1705, y: 950 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.6m
             {
                 signalName: 'DW_C',
                 signalPos: { x: '1720', y: '990' },
                 trainPos: { x: '1705', y: '990' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 2000, x: 1285, y: 950 },
+                    { distanceToSignal: 1000, x: 1510, y: 950 },
+                    { distanceToSignal: 500, x: 1705, y: 990 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~2.6m
             {
                 signalName: 'DW_D',
                 signalPos: { x: '1720', y: '1010' },
                 trainPos: { x: '1705', y: '1010' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 2000, x: 1285, y: 1010 },
+                    { distanceToSignal: 1000, x: 1510, y: 1010 },
+                    { distanceToSignal: 500, x: 1705, y: 1010 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2573,35 +2814,55 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~3km
             {
                 signalName: 'DW_T',
                 signalPos: { x: '2120', y: '930' },
                 trainPos: { x: '2135', y: '930' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 2000, x: 115, y: 1400 },
+                    { distanceToSignal: 1000, x: 2390, y: 930 },
+                    { distanceToSignal: 500, x: 2135, y: 930 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~3km
             {
                 signalName: 'DW_U',
                 signalPos: { x: '2120', y: '950' },
                 trainPos: { x: '2135', y: '950' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 2000, x: 115, y: 1420 },
+                    { distanceToSignal: 1000, x: 2390, y: 950 },
+                    { distanceToSignal: 500, x: 2135, y: 950 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~5km
             {
                 signalName: 'DW_W',
                 signalPos: { x: '2120', y: '990' },
                 trainPos: { x: '2135', y: '990' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5000 m
+                    { distanceToSignal: 3600, x: 85, y: 1240 },
+                    { distanceToSignal: 1800, x: 2390, y: 870 },
+                    { distanceToSignal: 500, x: 2135, y: 990 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO ~5km
             {
                 signalName: 'DW_X',
                 signalPos: { x: '2120', y: '1010' },
                 trainPos: { x: '2135', y: '1010' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5000 m
+                    { distanceToSignal: 3600, x: 85, y: 1260 },
+                    { distanceToSignal: 1800, x: 2390, y: 890 },
+                    { distanceToSignal: 500, x: 2135, y: 1010 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2688,6 +2949,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'Kzl_B',
                 signalPos: { x: '190', y: '1240' },
                 trainPos: { x: '175', y: '1240' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5000 m
+                    { distanceToSignal: 3600, x: 2225, y: 990 },
+                    { distanceToSignal: 1800, x: 2480, y: 870 },
+                    { distanceToSignal: 500, x: 175, y: 1240 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2695,6 +2962,12 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'Kzl_C',
                 signalPos: { x: '190', y: '1260' },
                 trainPos: { x: '175', y: '1260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~5000 m
+                    { distanceToSignal: 3600, x: 2225, y: 1010 },
+                    { distanceToSignal: 1800, x: 2480, y: 890 },
+                    { distanceToSignal: 500, x: 175, y: 1260 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2702,20 +2975,35 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'Kzl_L',
                 signalPos: { x: '270', y: '1240' },
                 trainPos: { x: '285', y: '1240' },
-                signalDirectionOnMap: 'left',
-                signalType: 'station_standard',
-            },
-            {
-                signalName: 'Kzl_O',
-                signalPos: { x: '270', y: '1260' },
-                trainPos: { x: '285', y: '1260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2400 m
+                    { distanceToSignal: 1200, x: 425, y: 1180, switchDirection: true },
+                    { distanceToSignal: 500, x: 285, y: 1240 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
             {
                 signalName: 'Kzl_J',
+                signalPos: { x: '270', y: '1260' },
+                trainPos: { x: '285', y: '1260' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 1500, x: 465, y: 1180},
+                    { distanceToSignal: 500, x: 285, y: 1260 },
+                ],
+                signalDirectionOnMap: 'left',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'Kzl_G',
                 signalPos: { x: '270', y: '1280' },
                 trainPos: { x: '285', y: '1280' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 1300, x: 425, y: 1120, switchDirection: true },
+                    { distanceToSignal: 500, x: 285, y: 1280 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2768,6 +3056,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_E2',
                 signalPos: { x: '320', y: '1120' },
                 trainPos: { x: '335', y: '1120' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2600 m
+                    { distanceToSignal: 1300, x: 375, y: 1280, switchDirection: true },
+                    { distanceToSignal: 500, x: 335, y: 1120 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2775,6 +3068,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_F1',
                 signalPos: { x: '320', y: '1140' },
                 trainPos: { x: '335', y: '1140' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1000, x: 465, y: 1140 },
+                    { distanceToSignal: 500, x: 335, y: 1140 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2782,6 +3080,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_F2',
                 signalPos: { x: '320', y: '1160' },
                 trainPos: { x: '335', y: '1160' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1000, x: 465, y: 1160 },
+                    { distanceToSignal: 500, x: 335, y: 1160 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2789,6 +3092,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_E1',
                 signalPos: { x: '320', y: '1180' },
                 trainPos: { x: '335', y: '1180' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2400 m
+                    { distanceToSignal: 1200, x: 375, y: 1240, switchDirection: true },
+                    { distanceToSignal: 500, x: 335, y: 1180 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2796,6 +3104,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_C1',
                 signalPos: { x: '570', y: '1140' },
                 trainPos: { x: '555', y: '1140' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1000, x: 425, y: 1140 },
+                    { distanceToSignal: 500, x: 555, y: 1140 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2803,6 +3116,11 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_C2',
                 signalPos: { x: '570', y: '1160' },
                 trainPos: { x: '555', y: '1160' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~2000 m
+                    { distanceToSignal: 1000, x: 425, y: 1160 },
+                    { distanceToSignal: 500, x: 555, y: 1160 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2810,22 +3128,39 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: 'DTA_D',
                 signalPos: { x: '570', y: '1180' },
                 trainPos: { x: '555', y: '1180' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 1500, x: 375, y: 1260 },
+                    { distanceToSignal: 500, x: 555, y: 1180 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6.7km
             {
                 signalName: 'DTA_B',
                 signalPos: { x: '650', y: '1140' },
                 trainPos: { x: '665', y: '1140' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6700 m
+                    { distanceToSignal: 4800, x: 1045, y: 1140 },
+                    { distanceToSignal: 3200, x: 919, y: 1140 },
+                    { distanceToSignal: 1600, x: 792, y: 1140 },
+                    { distanceToSignal: 500, x: 665, y: 1140 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6.7km
             {
                 signalName: 'DTA_A',
                 signalPos: { x: '650', y: '1160' },
                 trainPos: { x: '665', y: '1160' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6700 m
+                    { distanceToSignal: 4800, x: 1045, y: 1160 },
+                    { distanceToSignal: 3200, x: 919, y: 1160 },
+                    { distanceToSignal: 1600, x: 792, y: 1160 },
+                    { distanceToSignal: 500, x: 665, y: 1160 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -2881,19 +3216,31 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6.7km
             {
                 signalName: 'Pmi_C',
                 signalPos: { x: '1150', y: '1140' },
                 trainPos: { x: '1135', y: '1140' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6700 m
+                    { distanceToSignal: 4800, x: 755, y: 1140 },
+                    { distanceToSignal: 3200, x: 882, y: 1140 },
+                    { distanceToSignal: 1600, x: 1009, y: 1140 },
+                    { distanceToSignal: 500, x: 1135, y: 1140 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6.7km
             {
                 signalName: 'Pmi_D',
                 signalPos: { x: '1150', y: '1160' },
                 trainPos: { x: '1135', y: '1160' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6700 m
+                    { distanceToSignal: 4800, x: 755, y: 1160 },
+                    { distanceToSignal: 3200, x: 882, y: 1160 },
+                    { distanceToSignal: 1600, x: 1009, y: 1160 },
+                    { distanceToSignal: 500, x: 1135, y: 1160 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -2975,19 +3322,29 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO ~3km
             {
                 signalName: 'Sl_J',
                 signalPos: { x: '220', y: '1400' },
                 trainPos: { x: '205', y: '1400' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 2000, x: 2225, y: 930 },
+                    { distanceToSignal: 1000, x: 2480, y: 930 },
+                    { distanceToSignal: 500, x: 205, y: 1400 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO ~3km
             {
                 signalName: 'Sl_K',
                 signalPos: { x: '220', y: '1420' },
                 trainPos: { x: '205', y: '1420' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~3000 m
+                    { distanceToSignal: 2000, x: 2225, y: 950 },
+                    { distanceToSignal: 1000, x: 2480, y: 950 },
+                    { distanceToSignal: 500, x: 205, y: 1420 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -3061,19 +3418,29 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km peron 2.8km
             {
                 signalName: 'Sl_C',
                 signalPos: { x: '640', y: '1400' },
                 trainPos: { x: '655', y: '1400' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m, peron 2800 m
+                    { distanceToSignal: 4500, x: 805, y: 1400 },
+                    { distanceToSignal: 2800, x: 745, y: 1400 },
+                    { distanceToSignal: 500, x: 655, y: 1400 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km peron 2.8km
             {
                 signalName: 'Sl_B',
                 signalPos: { x: '640', y: '1420' },
                 trainPos: { x: '655', y: '1420' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m, peron 2800 m
+                    { distanceToSignal: 4500, x: 805, y: 1420 },
+                    { distanceToSignal: 2800, x: 745, y: 1420 },
+                    { distanceToSignal: 500, x: 655, y: 1420 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -3185,35 +3552,57 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km peron 2.5km
             {
                 signalName: 'Bo_K',
                 signalPos: { x: '910', y: '1400' },
                 trainPos: { x: '895', y: '1400' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m, peron 2500 m
+                    { distanceToSignal: 4500, x: 745, y: 1400 },
+                    { distanceToSignal: 2500, x: 805, y: 1400 },
+                    { distanceToSignal: 500, x: 895, y: 1400 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km peron 2.5km
             {
                 signalName: 'Bo_L',
                 signalPos: { x: '910', y: '1420' },
                 trainPos: { x: '895', y: '1420' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m, peron 2500 m
+                    { distanceToSignal: 4500, x: 745, y: 1420 },
+                    { distanceToSignal: 2500, x: 805, y: 1420 },
+                    { distanceToSignal: 500, x: 895, y: 1420 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~9km
             {
                 signalName: 'Bo_O',
                 signalPos: { x: '910', y: '1440' },
                 trainPos: { x: '895', y: '1440' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~9000 m
+                    { distanceToSignal: 6800, x: 530, y: 1570 },
+                    { distanceToSignal: 4600, x: 650, y: 1570 },
+                    { distanceToSignal: 2400, x: 775, y: 1440 },
+                    { distanceToSignal: 500, x: 895, y: 1440 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~9km
             {
                 signalName: 'Bo_P',
                 signalPos: { x: '910', y: '1460' },
                 trainPos: { x: '895', y: '1460' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~9000 m
+                    { distanceToSignal: 6800, x: 530, y: 1590 },
+                    { distanceToSignal: 4600, x: 650, y: 1590 },
+                    { distanceToSignal: 2400, x: 775, y: 1460 },
+                    { distanceToSignal: 500, x: 895, y: 1460 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -3392,19 +3781,27 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km
             {
                 signalName: 'Bo_B',
                 signalPos: { x: '1370', y: '1400' },
                 trainPos: { x: '1385', y: '1400' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m
+                    { distanceToSignal: 3000, x: 1495, y: 1400 },
+                    { distanceToSignal: 500, x: 1385, y: 1400 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~6km
             {
                 signalName: 'Bo_A',
                 signalPos: { x: '1370', y: '1420' },
                 trainPos: { x: '1385', y: '1420' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m
+                    { distanceToSignal: 3000, x: 1495, y: 1420 },
+                    { distanceToSignal: 500, x: 1385, y: 1420 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
@@ -3502,11 +3899,15 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
             }
         ],
         "SIGNALS": [
-            // TODO Add signal prediction ~6km
             {
                 signalName: 'O1_H',
                 signalPos: { x: '1600', y: '1420' },
                 trainPos: { x: '1585', y: '1420' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~6000 m
+                    { distanceToSignal: 3000, x: 1475, y: 1420 },
+                    { distanceToSignal: 500, x: 1585, y: 1420 },
+                ],
                 signalDirectionOnMap: 'right',
                 signalType: 'station_standard',
             },
@@ -3566,15 +3967,6 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction
-            {
-                signalName: 'JO_H',
-                invisibleSignal: true,
-                signalPos: { x: '2075', y: '1420' },
-                trainPos: { x: '2060', y: '1420' },
-                signalDirectionOnMap: 'right',
-                signalType: 'station_standard',
-            },
         ],
         "ANNOTATIONS": [
             {
@@ -3587,7 +3979,7 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 },
                 platforms: [
                     { label: 'Peron I', width: 80, height: 10, pos: { x: 1700, y: 1365 } },
-                    { label: 'Peron II', width: 140, height: 10, pos: { x: 1700, y: 1405 } },
+                    { label: 'Peron II', width: 110, height: 10, pos: { x: 1700, y: 1405 } },
                 ],
                 trackLabels: [
                     { text: '4', pos: { x: 1790, y: 1360 } },
@@ -3597,6 +3989,44 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 ]
             },
         ]
+    },
+    "OLKUSZ_TUNEL": {
+        "TRACKS": [
+            {
+                color: OUT_OF_STATION_TRACK_COLOR,
+                commands: [
+                    'M1970,1400 LR60 DOT5-5-4',
+                    'M1970,1420 LR60 DOT5-5-4',
+                ]
+            },
+        ],
+        "SIGNALS": [
+            {
+                signalName: 'JO_M',
+                invisibleSignal: true,
+                signalPos: { x: '2075', y: '1360' },
+                trainPos: { x: '2060', y: '1360' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'JO_SzN1',
+                invisibleSignal: true,
+                signalPos: { x: '2075', y: '1400' },
+                trainPos: { x: '2060', y: '1400' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+            {
+                signalName: 'JO_H',
+                invisibleSignal: true,
+                signalPos: { x: '2075', y: '1420' },
+                trainPos: { x: '2060', y: '1420' },
+                signalDirectionOnMap: 'right',
+                signalType: 'station_standard',
+            },
+        ],
+        "ANNOTATIONS": []
     },
     "285_BG_BOROWAGORKA": {
         "TRACKS": [
@@ -3632,14 +4062,27 @@ export const SCREEN6_DATA: ScreenData.ScreenDataProps = {
                 signalName: '285_BG_B',
                 signalPos: { x: '425', y: '1570' },
                 trainPos: { x: '440', y: '1570' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~9000 m
+                    { distanceToSignal: 6800, x: 805, y: 1440 },
+                    { distanceToSignal: 4600, x: 685, y: 1440 },
+                    { distanceToSignal: 2400, x: 560, y: 1570 },
+                    { distanceToSignal: 500, x: 440, y: 1570 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
-            // TODO Add signal prediction ~9km
             {
                 signalName: '285_BG_A',
                 signalPos: { x: '425', y: '1590' },
                 trainPos: { x: '440', y: '1590' },
+                trainPosDistance: [
+                    // DISTANCE TO MAIN SIGNAL: ~9000 m
+                    { distanceToSignal: 6800, x: 805, y: 1460 },
+                    { distanceToSignal: 4600, x: 685, y: 1460 },
+                    { distanceToSignal: 2400, x: 560, y: 1590 },
+                    { distanceToSignal: 500, x: 440, y: 1590 },
+                ],
                 signalDirectionOnMap: 'left',
                 signalType: 'station_standard',
             },
